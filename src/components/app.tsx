@@ -1,6 +1,11 @@
 import * as React from 'react'
 import './../main'
+import { ProductsTable } from './productsTable'
 
 export const App:React.FC = () => {
-    return <h1>działa</h1>
+    return (
+        <main>
+            <ProductsTable />
+        </main>
+    )
 }
