@@ -7,10 +7,17 @@ export const ProductsTable: React.FC = () => {
     const products = useSelector((state:Istate) => state.products)
     console.log(products)
     return (
-       <>
-            {products.map(obj => {
-                return <Product />
+       <table>
+           <tr>
+               <th>LP.</th>
+               <th>Nazwa</th>
+               <th>Cena</th>
+               <th>Stan</th>
+               <th></th>
+           </tr>
+            {products.map( (obj, index) => {
+                return <Product index={index} data={obj} />
             })}
-       </>
+       </table>
     )
 }

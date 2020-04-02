@@ -2,12 +2,34 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 main{
     width: 60%;
     padding-top: 6em;
     margin: auto;
-    background-color: #555;
-
+    border-spacing: none;
+    //background-color: #555;
+    table{
+        width: 100%;
+        border: 1px solid black;
+        text-align: center;
+        border-spacing: 0px;
+        tr:nth-of-type(even){
+            background-color: #ddd;
+        }
+        th, td{
+            padding: 1em;
+            .create,.delete{
+                margin-right: 0.5em;
+                font-size: 1.7rem;
+                cursor: pointer;
+            }
+            .cart{
+                    font-size: 1.7rem;
+                    cursor: pointer;
+                }
+        }
+    }
 }
