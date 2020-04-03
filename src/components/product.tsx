@@ -50,7 +50,7 @@ export const Product:React.FC<Iprops> = props => {
             <td><input onChange={e => changePrice(parseFloat(e.target.value))} type='number' value={price} /></td>
             <td><input onChange={e => changeState(e.target.value)} value={state} /></td>
             <td>
-                <span onClick={() => changeEdit()} className="material-icons create">create</span>
+                <span onClick={() => changeEdit()} className="material-icons create">save</span>
                 <span className="material-icons delete">delete</span>
                 <span className="material-icons cart">shopping_cart</span>
             </td>

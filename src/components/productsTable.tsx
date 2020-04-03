@@ -15,7 +15,7 @@ export const ProductsTable: React.FC = () => {
 
     return (
        <table>
-           <tr>
+           <tr className="tableHeader">
                <th>LP.</th>
                <th>Nazwa</th>
                <th>Cena</th>
