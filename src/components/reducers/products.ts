@@ -15,6 +15,8 @@ export const products = (state:Array<Iproducts> = [{id: 0, name:'żelki', price:
             state = JSON.parse(localStorage.getItem('products'))
             return state
         case "ADD_NEW_PRODUCT":
+            state.push(action.payload)
+            localStorage.setItem("products", JSON.stringify(state))
             return state
         case "EDIT_PRODUCT":
             state[action.index] = action.payload

@@ -5,6 +5,26 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+input{
+    padding: 1em;
+    text-align: center;
+    background-color: #585858;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
 main{
     width: 60%;
     padding-top: 6em;
@@ -12,6 +32,7 @@ main{
     border-spacing: none;
     //background-color: #555;
     table{
+        z-index: 1;
         width: 100%;
         box-shadow: 0px 0px 17px 5px rgba(179,179,179,1);
         border: 1px solid black;
@@ -40,16 +61,61 @@ main{
                     font-size: 1.7rem;
                     cursor: pointer;
             }
-            input{
-                padding: 1em;
-                text-align: center;
-                background-color: #585858;
-                color: white;
-                font-weight: 300;
-                letter-spacing: 1px;
-                border: 2px solid white;
-                border-radius: 8px;
+        }
+    }
+}
+.wrapper{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(70, 70, 70, 0.4);
+    z-index: 3;
+    padding-top: 7%;
+    .box{
+        width: 60%;
+        opacity: 1;
+        height: 40%;
+        padding: 2em;
+        box-shadow: 0px 0px 17px 5px rgb(126, 126, 126);
+        z-index: 4;
+        background-color: white;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        div{
+            flex-basis: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            input::placeholder{
+                color: #ccc;
+                font-size: 0.9rem;
             }
+            .stateInput{
+                margin-left: 15em;
+            }
+            .addButton{
+                margin-left: 9em;
+            }
+            button{
+                width: 9em;
+                border: 1px solid #707070;
+                background-color: #262626;
+                color: white;
+                border-radius: 5px;
+                padding: 0.3em;
+                font-size: 22px;
+            }
+        }
+        input{
+            width: 15em;
+        }
+        input::palceholder{
+            color: #fff;
         }
     }
 }
