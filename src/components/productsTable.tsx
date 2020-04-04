@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { loadFromLocalStorage } from './actions/loadFromLocalStorage'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { Istate } from './reducers/combined'
 import { Product } from './product'
 import { isAdding } from './actions/isAdding'
