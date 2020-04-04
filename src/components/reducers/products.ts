@@ -11,7 +11,7 @@ export interface Iproducts{
 
 export const products = (state:Array<Iproducts> = [], action:any) => {
     switch(action.type){
-        case "LOAD_FROM_LOCALSTORAGE":
+        case "LOAD_PRODUCTS_FROM_LOCALSTORAGE":
             console.log('loading products')
             localStorage.getItem('products')!=null?
             state = JSON.parse(localStorage.getItem('products'))
@@ -19,18 +19,26 @@ export const products = (state:Array<Iproducts> = [], action:any) => {
             null
             return state
         case "ADD_NEW_PRODUCT":
-            state.push(action.payload)
-            localStorage.setItem("products", JSON.stringify(state))
-            return state
-        case "DELETE_PRODUCT":
-            console.log(state)
+            state = [...state, action.payload]
             state.map((o, i) => {
                 return o.id = i
             })
+            localStorage.setItem("products", JSON.stringify(state))
+            return state
+        case "DELETE_PRODUCT":
+            console.log('deleting', state)
+            state.map((o, i) => {
+                return o.id = i
+            })
+            console.log('przefiltrowqano przed susnieciem')
             state = _.remove(state, (i) => {
-                console.log(i)
                 return i.id !== action.id
             })
+            state.map((o, i) => {
+                return o.id = i
+            })
+            console.log(action.id)
+            console.log(action.id)
             console.log(action.id)
             localStorage.setItem("products", JSON.stringify(state))
             return state

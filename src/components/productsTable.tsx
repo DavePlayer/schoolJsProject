@@ -5,6 +5,7 @@ import { useEffect } from 'react'
 import { Istate } from './reducers/combined'
 import { Product } from './product'
 import { isAdding } from './actions/isAdding'
+import { loadTrolleyFromLocalStorage } from './actions/loadTrolleyFromLocalStorage'
 
 export const ProductsTable: React.FC = () => {
     const dispatch = useDispatch()
@@ -12,6 +13,7 @@ export const ProductsTable: React.FC = () => {
     
     useEffect(() => {
         dispatch(loadFromLocalStorage())
+        dispatch(loadTrolleyFromLocalStorage())
     }, [])
 
     console.log('products: ',products)
@@ -31,7 +33,7 @@ export const ProductsTable: React.FC = () => {
             <tbody>
                 {products.length > 0?
                     products.map( (obj, index) => {
-                        return <Product key={index} index={index} data={obj} />
+                        return <Product inTrolley={false} key={index} index={index} data={obj} />
                     })
                     :
                     <></>
