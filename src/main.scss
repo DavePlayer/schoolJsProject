@@ -25,6 +25,22 @@ input{
     border-radius: 8px;
 }
 
+button{
+    width: 9em;
+    border: 1px solid #707070;
+    background-color: #262626;
+    color: white;
+    border-radius: 5px;
+    padding: 0.3em;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+button:active{
+    background-color: #3d3d3d;
+    width: 9.1em;
+}
+
 main{
     width: 60%;
     padding-top: 6em;
@@ -32,6 +48,7 @@ main{
     border-spacing: none;
     //background-color: #555;
     table{
+        flex-basis: 100%;
         z-index: 1;
         width: 100%;
         box-shadow: 0px 0px 17px 5px rgba(179,179,179,1);
@@ -62,6 +79,11 @@ main{
                     cursor: pointer;
             }
         }
+    }
+    .addProduct{
+        position: absolute;
+        right: 20%;
+        margin-top: 1.3em;
     }
 }
 .wrapper{
@@ -101,14 +123,8 @@ main{
             .addButton{
                 margin-left: 9em;
             }
-            button{
-                width: 9em;
-                border: 1px solid #707070;
-                background-color: #262626;
-                color: white;
-                border-radius: 5px;
-                padding: 0.3em;
-                font-size: 22px;
+            .nameInput{
+                width: 30em;
             }
         }
         input{

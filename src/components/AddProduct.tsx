@@ -33,7 +33,7 @@ export const AddProduct = () => {
                     <input onChange={e => changeState(e.target.value)} className="stateInput" placeholder="Stan" value={state} type="text"/>
                 </div>
                 <div>
-                    <input onChange={e => changeName(e.target.value)} placeholder="Nazwa" value={name} type="text"/>
+                    <input onChange={e => changeName(e.target.value)} className="nameInput" placeholder="Nazwa" value={name} type="text"/>
                 </div>
                 <div>
                     <button onClick={() => dispatch(isAdding())}>Anuluj</button>

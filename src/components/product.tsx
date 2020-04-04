@@ -4,6 +4,7 @@ import { Iproducts } from './reducers/products'
 import { editProducts } from './actions/editProduct'
 import { useDispatch, useSelector } from 'react-redux'
 import { Istate } from './reducers/combined'
+import { deleteProduct } from './actions/deleteProduct'
 
 interface Iprops{
     index:number
@@ -23,6 +24,9 @@ export const Product:React.FC<Iprops> = props => {
             dispatch(editProducts(props.index, {id:props.index, name, price, state}))
         }
     }
+    const delet = () => {
+        dispatch(deleteProduct(props.data.id))
+    }
 
     useEffect(() => {
         changeName(props.data.name)
@@ -39,7 +43,7 @@ export const Product:React.FC<Iprops> = props => {
             <td>{state}</td>
             <td>
                 <span  onClick={() => changeEdit()} className="material-icons create">create</span>
-                <span className="material-icons delete">delete</span>
+                <span className="material-icons delete" onClick={() => delet()}>delete</span>
                 <span className="material-icons cart">shopping_cart</span>
             </td>
         </tr>
@@ -51,8 +55,8 @@ export const Product:React.FC<Iprops> = props => {
             <td><input onChange={e => changeState(e.target.value)} value={state} /></td>
             <td>
                 <span onClick={() => changeEdit()} className="material-icons create">save</span>
-                <span className="material-icons delete">delete</span>
-                <span className="material-icons cart">shopping_cart</span>
+                <span style={{color: '#aaa', cursor: 'default'}} className="material-icons delete">delete</span>
+                <span style={{color: '#aaa', cursor: 'default'}}  className="material-icons cart">shopping_cart</span>
             </td>
         </tr>
     )
