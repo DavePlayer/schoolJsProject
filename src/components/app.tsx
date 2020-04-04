@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux'
 import { Istate } from './reducers/combined'
 import { TrolleyTable } from './trolleyTable'
 import { Header } from './header'
+import { Footer } from './footer'
 
 export const App:React.FC = () => {
     const isAddingProduct = useSelector((state:Istate) => state.isAdding)
@@ -21,6 +22,7 @@ export const App:React.FC = () => {
                 :
                 <></>
             }
+            <Footer />
         </>
     )
 }

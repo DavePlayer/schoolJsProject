@@ -178,3 +178,49 @@ main{
         }
     }
 }
+
+footer{
+    margin-top: 10em;
+    width: 100%;
+    padding: 3em;
+    background-color: #353535;
+    display: flex;
+    color: white;
+    column-gap: 3%;
+    h4{
+        font-size: 1.3em;
+        margin-bottom: 3em;
+        font-weight: 500;
+    }
+    .buySth{
+        flex-basis: 17%;
+    }
+    .ContactUs{
+        flex-basis: 17%;
+        margin-left: 2em;
+        .contactParagraph{
+            margin-top: 1em;
+            color: #0E7348;
+            a{
+                color: #0E7348;
+                text-decoration: none; 
+            }
+        }
+    }
+    .CopyRigths{
+        flex-basis: 12%;
+        margin-left: 2em;
+        
+    }
+    .SocialLinks{
+        margin-left: auto;
+        flex-basis: 40%;
+        text-align: right;
+        a{
+            color: white;
+            text-decoration: none;
+            font-size: 2.5em;
+            margin-left: 1em;
+        }
+    }
+}
