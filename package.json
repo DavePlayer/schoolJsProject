@@ -5,7 +5,9 @@
   "main": "index.tsx",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --open --hot"
+    "start": "webpack-dev-server --open --hot",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -16,10 +18,11 @@
   "bugs": {
     "url": "https://github.com/DavePlayer/schoolJsProject/issues"
   },
-  "homepage": "https://github.com/DavePlayer/schoolJsProject#readme",
+  "homepage": "https://DavePlayer.github.io/schoolJsProject",
   "devDependencies": {
     "@types/react": "^16.9.29",
     "@types/react-dom": "^16.9.5",
+    "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^4.0.3",
     "lodash": "^4.17.15",
     "node-sass": "^4.13.1",
