@@ -129,6 +129,7 @@ main{
     right: 20%;
     margin-top: 1.3em;
 }
+
 .wrapper{
     width: 100%;
     position: fixed;
@@ -138,6 +139,34 @@ main{
     background-color: rgba(70, 70, 70, 0.4);
     z-index: 3;
     padding-top: 7%;
+    .summary {
+        width: 70% !important;
+        height: auto !important;
+        display: flex;
+        overflow: auto;
+        flex-wrap: wrap;
+        figure{
+            flex-basis: 50%;
+            height: 100%;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .info{
+            flex-basis: 50%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            h1,p{
+                margin-bottom: 1em;
+                flex-basis: 100%;
+            }
+            button{
+                margin: auto;
+            }
+        }
+    }
     .box{
         width: 60%;
         opacity: 1;

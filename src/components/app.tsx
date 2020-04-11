@@ -11,7 +11,7 @@ import { Footer } from './footer'
 export const App:React.FC = () => {
     const isAddingProduct = useSelector((state:Istate) => state.isAdding)
     return (
-        <>
+        <> 
             <Header />
             <main>
                 <ProductsTable />
