@@ -27,7 +27,7 @@ export const Product:React.FC<Iprops> = props => {
     const changeEdit = () => {
         toggleEdit(o => !o)
         if(isEditing == false){
-            dispatch(editProducts(props.index, {id:props.index, name, price, state}))
+            dispatch(editProducts(props.index, {id:props.index, name, price, state, imgAdress:props.data.imgAdress}))
         }
     }
 
@@ -43,7 +43,7 @@ export const Product:React.FC<Iprops> = props => {
 
     const returnProduct = () => {
         dispatch(removeFromTrolley(props.data.id))
-        dispatch(addProduct({id:props.data.id, name:props.data.name, price:props.data.price, state:props.data.state}))
+        dispatch(addProduct({id:props.data.id, name:props.data.name, price:props.data.price, state:props.data.state, imgAdress:props.data.imgAdress}))
     }
 
     useEffect(() => {
@@ -94,7 +94,7 @@ export const Product:React.FC<Iprops> = props => {
             }
             {
                 isSummaring ? 
-                <Summary toggleSummary={() => trolley()} id={props.index} price={price} name={name} state={state} />
+                <Summary toggleSummary={() => trolley()} id={props.index} price={price} name={name} state={state} imgAdress={props.data.imgAdress} />
                 :
                 null
             }

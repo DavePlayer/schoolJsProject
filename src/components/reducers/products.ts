@@ -7,6 +7,7 @@ export interface Iproducts{
         name:string
         price:number
         state:string
+        imgAdress:string
 }
 
 export const products = (state:Array<Iproducts> = [], action:any) => {

@@ -9,21 +9,21 @@ interface Iprops {
     state: string,
     name: string,
     id: number,
-
+    imgAdress: string
 }
 
 export const Summary = (props:Iprops) => {
     const dispatch = useDispatch()
     const trolley = () => {
         dispatch(deleteProduct(props.id))
-        dispatch(moveToTrolley({id:props.id, name:props.name, price:props.price, state:props.state}))
+        dispatch(moveToTrolley({id:props.id, name:props.name, price:props.price, state:props.state, imgAdress:props.imgAdress}))
         props.toggleSummary()
     }
 
     return (
         <div className="wrapper">
             <div className="box summary">
-                <figure><img src="https://www.fillmurray.com/640/360" alt="zdjecie"/></figure>
+                <figure><img src={props.imgAdress} alt="zdjecie"/></figure>
                 <div className='info'>
                     <h1>{props.name}</h1>
                     <p>Cena: {props.price}zł</p>
