@@ -23,7 +23,7 @@ export const Summary = (props:Iprops) => {
     return (
         <div className="wrapper">
             <div className="box summary">
-                <figure><img src={props.imgAdress} alt="zdjecie"/></figure>
+                <figure><img src={props.imgAdress} alt="ERR 404 Nie ma"/></figure>
                 <div className='info'>
                     <h1>{props.name}</h1>
                     <p>Cena: {props.price}zł</p>
