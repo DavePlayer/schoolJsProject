@@ -18,8 +18,15 @@ export const App:React.FC = () => {
             <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/shop" component={Shop} />
+                <Route path="/contact" component={contact} />
             </Switch>
             <Footer />
         </Router>
+    )
+}
+
+const contact:React.FC = () => {
+    return(
+        <h1 style={{textAlign: 'center'}}>WORK IN PROGRESS</h1>
     )
 }
