@@ -7,9 +7,9 @@ export const Nav:React.FC = () => {
             <h1><a href="#">Sklep</a></h1>
             <nav>
                 <ul>
-                    <li><Link to='/'>Strona Główna</Link></li>
-                    <li><Link to='/shop'>Zakupy</Link></li>
-                    <li><Link to='/'>Kontakt</Link></li>
+                    <li><Link to='/schoolJsProject/'>Strona Główna</Link></li>
+                    <li><Link to='/schoolJsProject/shop'>Zakupy</Link></li>
+                    <li><Link to='/schoolJsProject/'>Kontakt</Link></li>
                 </ul>
             </nav>
         </div>

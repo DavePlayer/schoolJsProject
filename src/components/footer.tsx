@@ -14,7 +14,7 @@ export const Footer:React.FC = () => {
                 <h4>Contact US</h4>
                 <p>Cieszynki 24/100 Miasto 32-111
                 +44 666 666 666</p>
-                <p className="contactParagraph"><Link to='/'>or Contact Link</Link></p>
+                <p className="contactParagraph"><Link to='/schoolJsProject/'>or Contact Link</Link></p>
             </div>
             <div className="CopyRigths">
                 <h4>Copyright</h4>

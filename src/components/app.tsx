@@ -16,9 +16,9 @@ export const App:React.FC = () => {
         <Router> 
             <Nav />
             <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/shop" component={Shop} />
-                <Route path="/contact" component={contact} />
+                <Route path="/schoolJsProject/" exact component={Home} />
+                <Route path="/schoolJsProject/shop" component={Shop} />
+                <Route path="/schoolJsProject/contact" component={contact} />
             </Switch>
             <Footer />
         </Router>
