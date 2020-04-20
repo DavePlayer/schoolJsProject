@@ -12,10 +12,13 @@ module.exports = {
     devtool: "source-map",
 
     devServer: {
+        host: 'localhost',
+        port: '8080',
         historyApiFallback: true,
         hot: true,
         contentBase: path.resolve(__dirname, 'build'),
-        publicPath: '/'
+        open: true,
+        openPage: 'schoolJsProject',
     },
 
     resolve: {
