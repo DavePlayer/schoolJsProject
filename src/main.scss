@@ -41,7 +41,15 @@ button:active{
     width: 9.1em;
 }
 
-header{
+.homeImg{
+    width: 100%;
+    height: 30em;
+    background-color: #262626;
+    padding: 4em;
+    text-align: center;
+}
+
+.navigation{
     display: flex;
     padding: 1em;
     background-color: #353535;

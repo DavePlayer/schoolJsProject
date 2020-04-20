@@ -8,18 +8,19 @@ import { TrolleyTable } from './trolleyTable'
 import { Nav } from './nav'
 import { Footer } from './footer'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { Shop } from './shop'
-import { Home } from './Home'
 
-export const App:React.FC = () => {
+export const Shop:React.FC = () => {
+    const isAddingProduct = useSelector((state:Istate) => state.isAdding)
     return (
-        <Router> 
-            <Nav />
-            <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/shop" component={Shop} />
-            </Switch>
-            <Footer />
-        </Router>
+        <main>
+            <ProductsTable />
+            <TrolleyTable />
+            {
+                isAddingProduct?
+                <AddProduct />
+                :
+                null
+            }
+        </main>
     )
 }
