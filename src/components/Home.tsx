@@ -4,17 +4,35 @@ export const Home:React.FC = () => {
     return(
         <div className="home">
             <header className="homeImg">
-                <figure><img src="https://img.wallpapersafari.com/desktop/1920/1080/30/81/auBWNf.jpg" alt="IMG"/></figure>
+                <figure><img src="https://images.unsplash.com/photo-1499551660540-eaf0697882f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80" alt="IMG"/></figure>
             </header>
             <div className="info">
                 <span className="material-icons arrowDown">keyboard_arrow_down</span>
-                <aside><span className="material-icons">insert_comment</span></aside>
+                <aside>
+                    <h3>Specjalna okazja</h3>
+                    <figure>
+                        <img src="https://swiat-sprzatania.pl/userdata/public/gfx/f929c4472abfb4c265712649c1f28066.jpg" alt="Gogle vr"/>
+                    </figure>
+                    <p>Papier toaletowy + google VR HTC Vive</p>
+                    <div className="stockInfo">
+                        <div className="stock">Pozostało: 23</div>
+                        <div className="stock">Sprzedano: 9</div>
+                    </div>
+                    <div className="progress" style={{height: "5em"}}>
+                        <div className="progress-bar" role="progressbar" style={{width: '73%', height: "5em", backgroundColor: "#20F298"}} aria-valuenow={25} aria-valuemin={0} aria-valuemax={100}></div>
+                    </div>
+                    <div className="priceContainer">
+                        <h5><div className="oldPrice">3000zł</div> <div className="promotion">2300zł</div></h5>
+                    </div>
+                </aside>
                 <article>
                     <h2>Sklep</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore laboriosam doloribus quod rem sint sapiente quam fuga minima animi. Placeat reprehenderit perspiciatis corrupti animi sint fugiat quod vero? Hic, ipsum culpa, laudantium vitae voluptates magni eligendi saepe recusandae illum modi ad fugiat corporis qui ducimus itaque facere cum perferendis omnis architecto minus optio quaerat. Libero consectetur beatae ex nihil obcaecati molestias voluptate odio in repellat, vel eaque nostrum quo ut ad distinctio illum sapiente ullam, laborum similique quisquam? Autem aut quam repudiandae quo qui laborum, optio commodi, consequuntur fuga repellendus quia dolore rem nam facilis provident quidem et necessitatibus, itaque deserunt odio odit? Ipsa, at dolores. Doloribus sunt nesciunt consectetur, a deserunt rem, ea vel impedit iure saepe nostrum quo laudantium et. Velit, numquam aut omnis illo explicabo libero saepe quisquam impedit eius ratione tempora vitae ullam. Facilis facere maxime quo? Pariatur dolores aperiam similique magnam explicabo, totam deleniti modi?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor reprehenderit provident eaque? Tempora nemo quos praesentium? Ex nobis, ullam non rem cum aspernatur nam ducimus laboriosam debitis sapiente at ipsa ratione sed atque aliquam et. Quibusdam odio consectetur nam voluptas blanditiis esse iste reprehenderit. Asperiores eos voluptatibus fugiat ratione repellat vel, quibusdam esse nobis reiciendis recusandae aliquam officiis similique minus labore laudantium assumenda libero. Alias minima vitae cum officiis inventore voluptates aut qui explicabo vero a non, autem iusto molestiae quam voluptatibus obcaecati enim? Voluptates aut animi sapiente ipsam voluptate, vitae sed fugit illo fugiat eum est! Cumque in accusantium architecto, fuga placeat mollitia maxime ipsa accusamus error nisi sapiente molestias officiis sed inventore magni, magnam nam veniam. Suscipit, aut. Molestias incidunt, architecto aliquid reiciendis iste, nemo mollitia tempore sequi assumenda consequuntur ad laborum, voluptates provident doloremque. Qui natus adipisci quae cum distinctio harum soluta ratione temporibus eos ut illum eum cumque expedita corporis sed quibusdam dolores voluptas reiciendis necessitatibus, odit officiis, earum facilis. Eaque nostrum ipsum voluptas eligendi repellendus cum velit explicabo sapiente libero! Eos quia tempore totam omnis. Possimus voluptate at earum debitis quaerat laboriosam facere voluptates aspernatur. Deserunt nemo voluptates esse neque quaerat officia obcaecati dolorum nostrum, culpa odit similique, dignissimos mollitia aliquid labore sunt magni maiores vel corrupti dolorem dolore cupiditate. Enim incidunt eligendi facere eum. Iste eligendi, non, voluptas quo fugit incidunt velit nesciunt atque fuga earum quibusdam corrupti laboriosam, nemo labore repellat magni possimus sit asperiores at ipsa doloribus inventore et? Sit, pariatur quo!</p>
-                </article>
-                <aside><span className="material-icons">insert_comment</span></aside>
+                    <p>Witryna Sklep zajmuje się sprzedażą sprzętu elektronicznego. Oferujemy państwu sprzęt w następujących kategoriach: gaming, osprzęt sieciowy, osprzęt komputerowy i wiele więcej. </p>
+                    <p>To co tu znajdziecie będzie produktem sprawdzonym przez ludzi w 100% skupionych na zadaniach tego typu. Tak! My to robimy. Jednakże jedna z naszych najważniejszych czynności w pracy przechodzi u klientów niezauważalnie.</p>
+                    <p>Naszą pracę wspomaga sztuczna inteligencja "Banana Encounter" naszego pomysłu zaprojektowana by wyciągać z was jak najwięcej informacji w celach reklamowych. Nie trzeba się jadnak obawiać, ponieważ wszystko jest sprawdzane przez nasz zespól do tego przeznaczony. Tak, wiemy co kupiliście! Nawet poza naszym sklepem.</p>
+                    <p>Przymusowo w tym sklepie od czasu do czasu można zauważyć reklamy. Jednak nie bójcie się! Zostały one zaprojektowane z myślą by nie odstraszać klientów od razu po ich spostrzeżeniu. Zazwyczaj są to promocje z cen droższych na ceny rynkowe więc nie musicie się obawiać, że co kolwiek tutaj będzie tańsze niż bułka z serem za 25zł.</p>
+                    <p>Pamiętaj aby pić wodę! Zawsze dbamy o naszych klientów.</p>
+                    </article>
             </div>
         </div>
     )

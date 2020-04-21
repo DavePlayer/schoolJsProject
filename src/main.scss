@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/bootstrap";
+
 * {
     padding: 0;
     margin: 0;
@@ -45,7 +47,7 @@ button:active{
     color: white;
     .homeImg{
         width: 100%;
-        height: 30em;
+        height: 32em;
         background-color: #262626;
         text-align: center;
         .imgPlaceholder{
@@ -56,11 +58,12 @@ button:active{
             width: 100%;
             height: 100%;
             overflow: hidden;
-            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             img{
-                position: absolute;
-                bottom: -20em;
-                left: 0;
+                //position: absolute;
+               // bottom: -20em;
             }
         }
     }
@@ -69,11 +72,12 @@ button:active{
         background-color: #1D1D1D;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        padding-bottom: 3em;
+        justify-content: space-evenly;
         .arrowDown{
             flex-basis: 100%;
             text-align: center;
-            padding: 0.5em;
+            padding: 0.3em;
             font-size: 5em;
         }
         h2{
@@ -83,20 +87,80 @@ button:active{
             font-weight: 100;
             font-size: 2em;
         }
+
         aside{
             background-color: #101010;
-            flex-basis: 15%;
+            padding: 1em;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            span{
-                font-size: 6em;
+            flex-flow: column;
+            h3{
+                text-align: center;
+                font-weight: 400;
+                font-size: 2em;
+                margin-bottom: 1.5em;
+            }
+            border-radius: 1em;
+            flex-basis: 30%;
+            figure{
+                width: 60%;
+                margin: auto;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+                margin-bottom: 1.5em;
+            }
+            p{
+                font-size: 1.3em;
+                text-align: center;
+                margin-bottom: 2em;
+            }
+            .stockInfo{
+                display: flex;
+                justify-content: space-around;
+                margin-bottom: 1em;
+                .stock{
+                    font-size: 1.5em;
+                    flex-basis: 50%;
+                &:nth-of-type(even){
+                    text-align: end;
+                }
+                }
+            }
+            .progress{
+                margin-bottom: 2em;
+            }
+            .priceContainer{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h5{
+                    font-size: 2.5em;
+                    width: 100%;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .oldPrice{
+                        font-size: 0.8em;
+                        color: rgb(155, 155, 155);
+                        text-decoration: line-through;
+                    }
+                    .promotion{
+                        margin-left: 0.5em;
+                        color: rgb(29, 204, 128);
+                    }
+                }
             }
         }
+
         article{
             flex-basis: 60%;
             p{
                 margin-bottom: 2em;
+                font-size: 1.5em;
             }
         }
     }
