@@ -17,8 +17,9 @@ export const App:React.FC = () => {
             <Nav />
             <Switch>
                 <Route path="/schoolJsProject/" exact component={Home} />
-                <Route path="/schoolJsProject/shop" component={Shop} />
-                <Route path="/schoolJsProject/contact" component={contact} />
+                <Route path="/schoolJsProject/shop" exact component={Shop} />
+                <Route path="/schoolJsProject/contact" exact component={contact} />
+                <Route component={err404} />
             </Switch>
             <Footer />
         </Router>
@@ -26,6 +27,12 @@ export const App:React.FC = () => {
 }
 
 const contact:React.FC = () => {
+    return(
+        <h1 style={{textAlign: 'center'}}>WORK IN PROGRESS</h1>
+    )
+}
+
+const err404:React.FC = () => {
     return(
         <h1 style={{textAlign: 'center'}}>WORK IN PROGRESS</h1>
     )
