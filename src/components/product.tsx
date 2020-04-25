@@ -27,7 +27,7 @@ export const Product:React.FC<Iprops> = props => {
     const changeEdit = () => {
         toggleEdit(o => !o)
         if(isEditing == false){
-            dispatch(editProducts(props.index, {id:props.index, name, price, state, imgAdress:props.data.imgAdress}))
+            dispatch(editProducts(props.index, {id:props.index, name, price, state, imgAdress:props.data.imgAdress, seller:props.data.seller, type: props.data.type, desc: props.data.desc}))
         }
     }
 
@@ -43,7 +43,7 @@ export const Product:React.FC<Iprops> = props => {
 
     const returnProduct = () => {
         dispatch(removeFromTrolley(props.data.id))
-        dispatch(addProduct({id:props.data.id, name:props.data.name, price:props.data.price, state:props.data.state, imgAdress:props.data.imgAdress}))
+        dispatch(addProduct({id:props.index, name, price, state, imgAdress:props.data.imgAdress, seller:props.data.seller, desc: props.data.desc, type: props.data.type}))
     }
 
     useEffect(() => {
@@ -85,7 +85,7 @@ export const Product:React.FC<Iprops> = props => {
                 <td><input onChange={e => changeName(e.target.value)} value={name} /></td>
                 <td><input onChange={e => changePrice(parseFloat(e.target.value))} type='number' value={price} /></td>
                 <td><input onChange={e => changeState(e.target.value)} value={state} /></td>
-                <td>
+                <td className="iconsColumn">
                     <span onClick={() => changeEdit()} className="material-icons create">save</span>
                     <span style={{color: '#aaa', cursor: 'default'}} className="material-icons delete">delete</span>
                     <span style={{color: '#aaa', cursor: 'default'}}  className="material-icons cart">shopping_cart</span>
@@ -94,7 +94,7 @@ export const Product:React.FC<Iprops> = props => {
             }
             {
                 isSummaring ? 
-                <Summary toggleSummary={() => trolley()} id={props.index} price={price} name={name} state={state} imgAdress={props.data.imgAdress} />
+                <Summary toggleSummary={() => trolley()} desc={props.data.desc} type={props.data.type} seller={props.data.seller} id={props.index} price={price} name={name} state={state} imgAdress={props.data.imgAdress} />
                 :
                 null
             }

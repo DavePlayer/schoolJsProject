@@ -1,25 +1,31 @@
 import * as React from 'react'
-import './../main'
-import { ProductsTable } from './productsTable'
-import { AddProduct } from './AddProduct'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { Istate } from './reducers/combined'
-import { TrolleyTable } from './trolleyTable'
-import { Nav } from './nav'
-import { Footer } from './footer'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Iproducts } from './reducers/products'
+import { TileProduct } from './tileProduct'
+import { useEffect } from 'react'
+import { loadFromLocalStorage } from './actions/loadFromLocalStorage'
+import { loadTrolleyFromLocalStorage } from './actions/loadTrolleyFromLocalStorage'
 
 export const Shop:React.FC = () => {
-    const isAddingProduct = useSelector((state:Istate) => state.isAdding)
+    const products:Array<Iproducts> = useSelector((state:Istate) => state.products)
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(loadFromLocalStorage())
+        dispatch(loadTrolleyFromLocalStorage())
+    }, [])
+
+    console.log(products)
     return (
-        <main>
-            <ProductsTable />
-            <TrolleyTable />
-            {
-                isAddingProduct?
-                <AddProduct />
+        <main className="shop">
+            <h1>Produkty</h1>
+            {products.length > 0?
+                products.map( (obj, index) => {
+                    return <TileProduct key={index} id={index} name={obj.name} price={obj.price} state={obj.state} imgAdress={obj.imgAdress} seller={obj.seller} desc={obj.desc} type={obj.type} />
+                })
                 :
-                null
+                <></>
             }
         </main>
     )

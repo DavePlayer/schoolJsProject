@@ -5,9 +5,12 @@ import * as _ from 'lodash'
 export interface Iproducts{
         id:number
         name:string
-        price:number
+        price:number | null
         state:string
         imgAdress:string
+        seller: string
+        type: string
+        desc: string
 }
 
 export const products = (state:Array<Iproducts> = [], action:any) => {

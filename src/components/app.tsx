@@ -5,6 +5,7 @@ import { Footer } from './footer'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { AdminPanel } from './adminPanel'
 import { Home } from './Home'
+import { Shop } from './shop'
 
 export const App:React.FC = () => {
     const Test = PageHolder
@@ -13,7 +14,7 @@ export const App:React.FC = () => {
             <Switch>
                 <Route path="/schoolJsProject/" exact render={() => <Test children={<Home />}/>} />
                 <Route path="/schoolJsProject/admin" exact render={() => <PageHolder children={<AdminPanel />}/>} />
-                <Route path="/schoolJsProject/shop" exact render={() => <PageHolder />} />
+                <Route path="/schoolJsProject/shop" exact render={() => <PageHolder children={<Shop />} />} />
                 <Route path="/schoolJsProject/contact" exact render={() => <PageHolder /> } />
                 <Route component={err404} />
             </Switch>

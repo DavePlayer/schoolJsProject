@@ -10,13 +10,16 @@ interface Iprops {
     name: string,
     id: number,
     imgAdress: string
+    seller: string;
+    type: string;
+    desc: string
 }
 
 export const Summary = (props:Iprops) => {
     const dispatch = useDispatch()
     const trolley = () => {
         dispatch(deleteProduct(props.id))
-        dispatch(moveToTrolley({id:props.id, name:props.name, price:props.price, state:props.state, imgAdress:props.imgAdress}))
+        dispatch(moveToTrolley({id:props.id, name:props.name, price:props.price, state:props.state, imgAdress:props.imgAdress, seller:props.seller, type: props.type, desc: props.desc}))
         props.toggleSummary()
     }
 

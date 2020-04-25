@@ -11,9 +11,12 @@ export const AddProduct:React.FC = () => {
     const dispatch = useDispatch()
     const length = useSelector((state:Istate) => state.products.length)
     const [name, changeName] = useState(``)
-    const [price, changePrice] = useState(0)
+    const [price, changePrice] = useState(null)
     const [state, changeState] = useState(``)
     const [imgAdress, changeimgAdress] = useState(``)
+    const [seller, updateSeller] = useState(``)
+    const [type, changeType] = useState(``)
+    const [desc, updateDesc] = useState(``)
     const [images, updateImages] = useState([
         'https://placeimg.com/1000/1000/any',
         'https://placeimg.com/1000/1000/animals',
@@ -29,11 +32,14 @@ export const AddProduct:React.FC = () => {
     const [endImageIndex, updateEndImageIndex] = useState(3)
 
     const createProduct = () =>{
-        if(name.length > 0 && state.length > 0 && imgAdress.length > 0){
-            dispatch(addProduct({id:length+1, name, price, state, imgAdress}))
+        if(name.length > 0 && state.length > 0 && imgAdress.length > 0 && type.length > 0 && seller.length > 0 && desc.length > 0){
+            dispatch(addProduct({id:length+1, name, price, state, imgAdress, type, seller, desc}))
             changeName('')
-            changePrice(0)
+            changePrice(null)
             changeState('')
+            updateSeller('')
+            changeType('')
+            updateDesc('')
             dispatch(isAdding())
 
         } else {
@@ -52,6 +58,7 @@ export const AddProduct:React.FC = () => {
     return (
         <div className="wrapper">
             <article className='box'>
+                <h1>Dodaj Produkt</h1>
                 <div>
                     <input onChange={e => changePrice(parseFloat(e.target.value))} placeholder="Cena" value={price} type="number"/>
                     <input onChange={e => changeState(e.target.value)} className="stateInput" placeholder="Stan" value={state} type="text"/>
@@ -59,6 +66,14 @@ export const AddProduct:React.FC = () => {
                 <div>
                     <input onChange={e => changeName(e.target.value)} className="nameInput" placeholder="Nazwa" value={name} type="text"/>
                 </div>
+                <div>
+                    <input onChange={e => updateSeller(e.target.value)} placeholder="Sprzedawca" value={seller} type="text"/>
+                    <input onChange={e => changeType(e.target.value)} className="stateInput" placeholder="Typ" value={type} type="text"/>
+                </div>
+                <div>
+                    <textarea onChange={e => updateDesc(e.target.value)} className="description" placeholder="Description" value={desc}></textarea>
+                </div>
+                <div><p>Choose Image</p></div>
                 <div className="imageHolder">
                     <p className="material-icons" onClick={() => {
                         if(startImageIndex >= 1){
