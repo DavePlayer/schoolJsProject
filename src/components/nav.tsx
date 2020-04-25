@@ -9,7 +9,7 @@ export const Nav:React.FC = () => {
                 <ul>
                     <li><Link to='/schoolJsProject/'>Strona Główna</Link></li>
                     <li><Link to='/schoolJsProject/shop'>Zakupy</Link></li>
-                    <li><Link to='/schoolJsProject/'>Kontakt</Link></li>
+                    <li><Link to='/schoolJsProject/contact'>Kontakt</Link></li>
                 </ul>
             </nav>
         </div>

@@ -11,7 +11,7 @@ export const AdminPanel:React.FC = () => {
     return (
         <main>
             <ProductsTable />
-            {/* <TrolleyTable /> */}
+            <TrolleyTable />
             {
                 isAddingProduct?
                 <AddProduct />
