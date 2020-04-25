@@ -1,0 +1,161 @@
+[33mcommit c55809e0b4520fc1a11e9262b2edcaa729d5fc18[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31mrepo/master[m[33m)[m
+Author: Dave <dave@pasokon-wa.localdomain>
+Date:   Sat Apr 25 13:40:38 2020 +0200
+
+    added error 404 handler and changed shop table component to admin panel
+
+[33mcommit 9895b87163e5f036769fb3debc548741858d753a[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Tue Apr 21 16:51:53 2020 +0200
+
+    updated home page content
+
+[33mcommit e86955c6b6f4486704cf2d3b683dc2472cde4292[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Mon Apr 20 19:24:58 2020 +0200
+
+    configured webpack dev server to be compatible with github pages
+
+[33mcommit ed830a20382d81f53a32a34a1bc5b13bb6c36d38[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Mon Apr 20 19:13:51 2020 +0200
+
+    repaired github pages issue
+
+[33mcommit 9665fcbbf6321a2f8514ca6dce15a009668fee93[m[33m ([m[1;31mrepo/HomePage[m[33m, [m[1;32mHomePage[m[33m)[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Mon Apr 20 14:13:49 2020 +0200
+
+    finished adding and stylizing home page
+
+[33mcommit 79cedd22e6635efc19e46c9b613fc7f60f869f60[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Mon Apr 20 13:28:01 2020 +0200
+
+    instaled react router and configured basic routing
+
+[33mcommit 09ec498ec05d5f0460e788d19fa8edfe165282fd[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Sat Apr 11 14:47:36 2020 +0200
+
+    updating github pages
+
+[33mcommit 9ba50ce1d5c4e7c7e20121eab7abc2ac6ac27fb5[m[33m ([m[1;31mrepo/SummaryWrapper[m[33m, [m[1;32mSummaryWrapper[m[33m)[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Sat Apr 11 14:19:21 2020 +0200
+
+    expanded image chooser element to unlimited (if added)"
+
+[33mcommit c78938f7fe6e5c3c23782e9ccfed4db27172c4bc[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Sat Apr 11 13:28:38 2020 +0200
+
+    added possibility of chosing (temporary) 4 photos to product
+
+[33mcommit a10771deede43da59d134038fca0d81214790574[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Sat Apr 11 12:24:06 2020 +0200
+
+    added summary wraper with static image(for now)
+
+[33mcommit 264d69004c4aa591d07a0cba866b8b7a1050c50a[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Mon Apr 6 11:22:48 2020 +0200
+
+    added github pages module
+
+[33mcommit 1e3a0cbc129649f91ae5c7ef55675595ec6628c7[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Mon Apr 6 11:14:37 2020 +0200
+
+    created npm build
+
+[33mcommit e22e0dbc1b924b5ca92972111f0e3d10f6a1af24[m[33m ([m[1;31mrepo/footer[m[33m, [m[1;32mfooter[m[33m)[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Sat Apr 4 21:47:47 2020 +0200
+
+    added and stylized footer with social links
+
+[33mcommit 74f1c543dc40202a4b622364c2ad8412a40da93c[m[33m ([m[1;31mrepo/header[m[33m, [m[1;32mheader[m[33m)[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Sat Apr 4 21:12:09 2020 +0200
+
+    added and stylized header
+
+[33mcommit 202f8ae93acb4be5d7764edaa7d02cc0fd739078[m[33m ([m[1;31mrepo/trolleyTable[m[33m, [m[1;32mtrolleyTable[m[33m)[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Sat Apr 4 20:49:00 2020 +0200
+
+    created summary for trolley and stylized rest
+
+[33mcommit 49ae8192d0c1aa47d79994363152ab3ea9e4f3a2[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Sat Apr 4 19:28:11 2020 +0200
+
+    added products movement between tables and stylizations
+
+[33mcommit f3727617a6298e00985dec204ab534b02505fa21[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Sat Apr 4 17:20:57 2020 +0200
+
+    created trolley table element and trolley reducer
+
+[33mcommit d8b081b4f6dfe329da6b1d9e46ead1e00dfc0c5a[m[33m ([m[1;31mrepo/productsTable[m[33m, [m[1;32mproductsTable[m[33m)[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Sat Apr 4 16:44:42 2020 +0200
+
+    added delete product function, repaired fetching JSON bugs adn stylized rest of the product table
+
+[33mcommit 29b99be5ddf3427be2d21f203063102fd5250334[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Fri Apr 3 18:25:30 2020 +0200
+
+    added and stylized new add product wrapper
+
+[33mcommit 54bd5e41fd469e5ff9074b518975e3aa4221f817[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Fri Apr 3 16:08:41 2020 +0200
+
+    changed style of table
+
+[33mcommit c5e8eee0ac2567bd77f900ef2efccb698b2c2c72[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Fri Apr 3 15:42:52 2020 +0200
+
+    added lodash library and written change data system that is saved to JSON
+
+[33mcommit 886b266e36521d84697b899a2ba077373b98c365[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Thu Apr 2 18:05:43 2020 +0200
+
+    added icon fonts and stylized rest a little bit
+
+[33mcommit 278125b195776038f3100814fc3b0170918ca706[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Thu Apr 2 17:11:19 2020 +0200
+
+    added products reducer and created product table with not ready products inside
+
+[33mcommit 94a78205e39f318ea030c58628d896e6b08e916f[m[33m ([m[1;32mworkspace[m[33m)[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Tue Mar 31 18:00:17 2020 +0200
+
+    added redux and created store with temporary data
+
+[33mcommit d0c2f4582380a9973636a536f563eeb0da241971[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Tue Mar 31 16:04:46 2020 +0200
+
+    added sass loader
+
+[33mcommit 14e54c6f85b5d92c1c6776505c0e38bc2d5747a3[m
+Author: unknown <daveplayer2001@gmail.com>
+Date:   Tue Mar 31 15:22:32 2020 +0200
+
+    setup project rof react with typescript
+
+[33mcommit b4fcaab85503a0cf55f60b00324bdd6c50786964[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: DavePlayer <51831211+DavePlayer@users.noreply.github.com>
+Date:   Tue Mar 31 12:18:45 2020 +0200
+
+    Initial commit
