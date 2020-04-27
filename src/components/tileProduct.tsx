@@ -11,12 +11,6 @@ export const TileProduct:React.FC<Iproducts> = (props:Iproducts) => {
     const ch = Math.floor(Math.random()*4)+1
     const arr = [1,2,3,4,5]
     const dispatch = useDispatch()
-    const [added, changeAdded] = useState(false)
-    const trolley = () => {
-        dispatch(moveToTrolley({id:props.id, name:props.name, price:props.price, state:props.state, imgAdress:props.imgAdress, seller:props.seller, type: props.type, desc: props.desc}))
-        changeAdded(true)
-        dispatch(deleteProduct(props.id))
-    }
 
     return(
     <article className="tile">
@@ -32,7 +26,7 @@ export const TileProduct:React.FC<Iproducts> = (props:Iproducts) => {
                     <span className="material-icons">grade</span>
                 <span>kupiono {Math.floor((Math.random()*144)+3)} sztuk</span>
             </p>
-            <ul>shopTiles
+            <ul>
                 <li>stan: {props.state}</li>
                 <li>typ: {props.type}</li>
             </ul>
@@ -41,11 +35,7 @@ export const TileProduct:React.FC<Iproducts> = (props:Iproducts) => {
             <p className="price">Cena: {props.price}</p>
             <p>U ciebie za <span className="red">{Math.floor((Math.random()*14)+17)} dni</span></p>
             <p><span className="blue">{Math.floor(Math.random()*4)+1} oferty</span> od {props.price -Math.floor(Math.random()*24)+13} zł</p>
-            {added==false? 
-            <Link to={`/schoolJsProject/shop/${props.id}`}><button>Dodaj do koszyka</button></Link>
-            :
-            null    
-        }
+            <Link to={`/schoolJsProject/shop/${props.id}`}><button>Dodaj do koszyka</button></Link>   
         </section>
     </article>
     )

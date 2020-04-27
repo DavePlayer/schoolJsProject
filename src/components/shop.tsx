@@ -18,15 +18,17 @@ export const Shop:React.FC = () => {
 
     console.log(products)
     return (
-        <main className="shop">
-            <h1>Produkty</h1>
-            {products.length > 0?
-                products.map( (obj, index) => {
-                    return <TileProduct key={index} id={index} name={obj.name} price={obj.price} state={obj.state} imgAdress={obj.imgAdress} seller={obj.seller} desc={obj.desc} type={obj.type} />
-                })
-                :
-                <></>
-            }
-        </main>
+        <div className="background-grey">
+            <main className="shop">
+                <h1>Produkty</h1>
+                {products.length > 0?
+                    products.map( (obj, index) => {
+                        return <TileProduct key={index} id={index} name={obj.name} price={obj.price} state={obj.state} imgAdress={obj.imgAdress} seller={obj.seller} desc={obj.desc} type={obj.type} />
+                    })
+                    :
+                    <></>
+                }
+            </main>
+        </div>
     )
 }
