@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux'
 import { moveToTrolley } from './actions/moveToTrolley'
 import { useState } from 'react'
 import { deleteProduct } from './actions/deleteProduct'
+import { Link } from 'react-router-dom'
 
 
 export const TileProduct:React.FC<Iproducts> = (props:Iproducts) => {
@@ -31,7 +32,7 @@ export const TileProduct:React.FC<Iproducts> = (props:Iproducts) => {
                     <span className="material-icons">grade</span>
                 <span>kupiono {Math.floor((Math.random()*144)+3)} sztuk</span>
             </p>
-            <ul>
+            <ul>shopTiles
                 <li>stan: {props.state}</li>
                 <li>typ: {props.type}</li>
             </ul>
@@ -41,7 +42,7 @@ export const TileProduct:React.FC<Iproducts> = (props:Iproducts) => {
             <p>U ciebie za <span className="red">{Math.floor((Math.random()*14)+17)} dni</span></p>
             <p><span className="blue">{Math.floor(Math.random()*4)+1} oferty</span> od {props.price -Math.floor(Math.random()*24)+13} zł</p>
             {added==false? 
-            <button onClick={() => trolley()}>Dodaj do koszyka</button>
+            <Link to={`/schoolJsProject/shop/${props.id}`}><button>Dodaj do koszyka</button></Link>
             :
             null    
         }
