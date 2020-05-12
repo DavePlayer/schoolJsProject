@@ -172,6 +172,9 @@ button:active{
     a{
         color: white;
         text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     h1{
         flex-basis: 48%;
