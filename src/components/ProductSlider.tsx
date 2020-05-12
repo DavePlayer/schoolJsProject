@@ -12,15 +12,13 @@ interface IProps{
 
 export const ProductSlider:React.FC<IProps> = (props:IProps) => {
     const products:Array<Iproducts> = useSelector((o:Istate) => o.products)
-    const [startImageIndex, updateStartImageIndex] = useState(0);
-    const [endImageIndex, updateEndImageIndex] = useState(3);
     let reand = Math.floor(Math.random() * (products.length - 4))
     console.log(reand)
     return(
         <section className="productSlider">
             <h3>Te produkty mogą ci się spodobać</h3>
             {products.length > 0 ? 
-                products.length >= 5 ?
+                products.length >= 4 ?
                     _.filter(products, (o:any) => {
                         return o.id != props.productId
                     }).splice(reand, reand+3).map(o => {
