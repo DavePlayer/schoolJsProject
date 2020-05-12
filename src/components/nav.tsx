@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Link} from 'react-router-dom'
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Istate } from './reducers/combined';
 import { Iproducts } from './reducers/products';
 import { useState, useEffect } from 'react';
@@ -21,7 +21,7 @@ export const Nav:React.FC = () => {
     console.log('sum: ', sum)
     return(
         <div className="navigation">
-            <h1><a href="#">Sklep</a></h1>
+            <h1><Link to='/schoolJsProject/'>Sklep</Link></h1>
             <nav>
                 <ul>
                     <li><Link to='/schoolJsProject/'>Strona Główna</Link></li>
@@ -29,8 +29,8 @@ export const Nav:React.FC = () => {
                     <li><Link to='/schoolJsProject/contact'>Kontakt</Link></li>
                     <li><Link to='/schoolJsProject/admin'>Admin</Link></li>
                     <li>
-                        <Link to='/schoolJsProject/'>
-                            <span className="material-icons">shopping_cart</span>
+                        <Link to='/schoolJsProject/trolley'>
+                            <span className="material-icons nav-cart">shopping_cart</span>
                             {sum} zł
                         </Link>
                     </li>

@@ -14,9 +14,7 @@ export const productsInTrolley = (state:Array<Iproducts> = [], action:any) => {
             state.map((o, i) => {
                 return o.id = i
             })
-            console.log('usuwanie z koszyka')
             state = _.remove(state, (i) => {
-                console.log(i)
                 return i.id !== action.id
             })
             state.map((o, i) => {

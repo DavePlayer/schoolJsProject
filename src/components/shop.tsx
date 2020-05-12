@@ -11,11 +11,6 @@ export const Shop:React.FC = () => {
     const products:Array<Iproducts> = useSelector((state:Istate) => state.products)
     const dispatch = useDispatch()
 
-    useEffect(() => {
-        dispatch(loadFromLocalStorage())
-        dispatch(loadTrolleyFromLocalStorage())
-    }, [])
-
     console.log(products)
     return (
         <div className="background-grey">

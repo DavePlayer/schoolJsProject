@@ -28,6 +28,7 @@ export const products = (state:Array<Iproducts> = [], action:any) => {
                 return o.id = i
             })
             localStorage.setItem("products", JSON.stringify(state))
+            console.log("ZXDDDDDDDDDDDDDDDDD: ", state)
             return state
         case "DELETE_PRODUCT":
             console.log('deleting', state)

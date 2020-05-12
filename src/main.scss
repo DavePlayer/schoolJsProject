@@ -163,6 +163,143 @@ button:active{
     }
 }
 
+.trolleyPage{
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    background-color: #ccc;
+    .left,.right{
+        flex-basis: 65%;
+        padding: 1em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .productSum{
+            padding: 1em;
+            flex-basis: 100%;
+            background-color: #fff;
+            border-radius: 3px;
+            display: flex;
+            h3{
+                font-size: 1.8em;
+                flex-basis: 80%;
+            }
+            .deleteAll{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                color: #0E7348;
+                font-size: 1.3em;
+                flex-basis: 20%;
+                text-align: left;
+                cursor: pointer;
+                .material-icons{
+                    font-size: 1.5em;
+                }
+            }
+        }
+        .productsList{
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 100%;
+            margin-top: 1em;
+            border-radius: 3px;
+            overflow: hidden;
+            h1{
+                text-align: center;
+                width: 100%;
+                font-size: 2em;
+                padding: 1em;
+            }
+            .product{
+                display: flex;
+                background-color: #fff;
+                padding: 0.5em;
+                height: 10em;
+                flex-basis: 100%;
+                margin-bottom: 0.2em;
+                figure{
+                    flex-basis: 20%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        width: 100%;
+                        max-height: 100%;
+                    }
+                }
+                .info{
+                    flex-basis: 80%;
+                    padding-left: 1em;
+                    h3{
+                        font-size: 1em;
+                        font-weight: 600;
+                    }
+                    ul{
+                        padding-left: 1em;
+                    }
+                }
+                .priceDel{
+                    flex-basis: 20%;
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    color: #0E7348;
+                    span{
+                        font-size: 3em;
+                        flex-basis: 100%;
+                        text-align: center;
+                        cursor: pointer;
+                    }
+
+                    p{
+                        flex-basis: 100%;
+                        text-align: center;
+                        font-size: 1.6em;
+                    }
+                }
+            }
+        }
+        .payment{
+            flex-basis: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 1em;
+            max-height: 12em;
+            background-color: #fff;
+            p{
+                flex-basis: 70%;
+                font-size: 1.2em;
+            }
+            h3{
+                flex-basis: 30%;
+            }
+            button{
+                flex-basis: 90%;
+                margin-top: 0.5em;
+            }
+        }
+        .useless{
+            flex-basis: 100%;
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1em;
+            font-size: 1.2em;
+            cursor: pointer;
+            background-color: #fff;
+        }
+    }
+    .right{
+        flex-basis: 35%;
+    }
+}
+
 .navigation{
     display: flex;
     padding: 1em;
@@ -173,20 +310,18 @@ button:active{
         color: white;
         text-decoration: none;
         display: flex;
-        justify-content: center;
         align-items: center;
     }
     h1{
-        flex-basis: 48%;
+        flex-basis: 40%;
         margin-left: 2%;
-        align-items: center;
-        text-align: justify;
+        text-align: left;
         font-weight: 500;
         letter-spacing: 1px;
         font-size: 3em;
     }
     nav{
-        flex-basis: 36%;
+        flex-basis: 46%;
         margin-left: auto;
         margin-right: 3%;
         ul{
@@ -197,6 +332,13 @@ button:active{
             font-size: 1.3em;
             display: flex;
             list-style: none;
+            
+        }
+        a:hover{
+                color: #0E7348;
+        }
+        .nav-cart{
+            margin: 0.3em;
         }
     }
 }

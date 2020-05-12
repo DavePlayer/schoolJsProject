@@ -7,6 +7,11 @@ import { AdminPanel } from './adminPanel'
 import { Home } from './Home'
 import { Shop } from './shop'
 import { ProductPage } from './productPage'
+import { TrolleyPage } from './trolleyPage'
+import { useDispatch } from 'react-redux'
+import { useEffect } from 'react'
+import { loadFromLocalStorage } from './actions/loadFromLocalStorage'
+import { loadTrolleyFromLocalStorage } from './actions/loadTrolleyFromLocalStorage'
 
 export const App:React.FC = () => {
     const Test = PageHolder
@@ -16,6 +21,7 @@ export const App:React.FC = () => {
                 <Route path="/schoolJsProject/" exact render={() => <Test children={<Home />}/>} />
                 <Route path="/schoolJsProject/admin" exact render={() => <PageHolder children={<AdminPanel />}/>} />
                 <Route path="/schoolJsProject/shop" exact render={() => <PageHolder children={<Shop />} />} />
+                <Route path="/schoolJsProject/trolley" exact render={() => <PageHolder children={<TrolleyPage />} />} />
                 <Route path="/schoolJsProject/shop/:id" component={ProductPage} />
                 <Route path="/schoolJsProject/contact" exact render={() => <PageHolder /> } />
                 <Route component={err404} />
@@ -29,6 +35,11 @@ interface IPropHolder {
 }
 
 const PageHolder:React.FC = (props:IPropHolder) => {
+    const dispatch = useDispatch();
+    useEffect(() => {
+          dispatch(loadFromLocalStorage());
+          dispatch(loadTrolleyFromLocalStorage());
+    }, []);
     return(
         <>
             <Nav />

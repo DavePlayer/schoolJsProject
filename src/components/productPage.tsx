@@ -29,9 +29,9 @@ export const ProductPage: React.FC = (props: any) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(loadFromLocalStorage());
-    dispatch(loadTrolleyFromLocalStorage());
-  }, []);
+      dispatch(loadFromLocalStorage());
+      dispatch(loadTrolleyFromLocalStorage());
+  }, [])
 
   console.log(products, product);
 

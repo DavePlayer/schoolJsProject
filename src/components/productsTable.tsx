@@ -10,11 +10,6 @@ import { loadTrolleyFromLocalStorage } from './actions/loadTrolleyFromLocalStora
 export const ProductsTable: React.FC = () => {
     const dispatch = useDispatch()
     const products = useSelector((state:Istate) => state.products)
-    
-    useEffect(() => {
-        dispatch(loadFromLocalStorage())
-        dispatch(loadTrolleyFromLocalStorage())
-    }, [])
 
     console.log('products: ',products)
 
