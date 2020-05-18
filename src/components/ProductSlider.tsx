@@ -21,9 +21,9 @@ export const ProductSlider:React.FC<IProps> = (props:IProps) => {
                 products.length >= 4 ?
                     _.filter(products, (o:any) => {
                         return o.id != props.productId
-                    }).splice(reand, reand+3).map(o => {
+                    }).slice(reand, reand+3).map(o => {
                         console.log(o)
-                        return <ProposedProducts data={o}/>
+                        return <ProposedProducts key={o.id} data={o}/>
                     })
                     :
                     _.filter(products, (o:any) => {
@@ -31,10 +31,10 @@ export const ProductSlider:React.FC<IProps> = (props:IProps) => {
                         if(o.id != props.productId) return o
                     }).map((o:any) => {
                         console.log(o)
-                        return <ProposedProducts data={o}/>
+                        return <ProposedProducts key={o.id} data={o}/>
                     })     
                 :
-                null 
+                <h3>Brak produktów w koszyku</h3>
             }
             
         </section>

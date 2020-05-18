@@ -405,6 +405,9 @@ main{
     h1{
         width: 100%;
     }
+    h2{
+        margin-top: 2em;
+    }
     .tile{
         border-radius: 3px;
         margin-bottom: 1em;
@@ -481,6 +484,20 @@ main{
 .background-grey{
     background-color: #eee;
     width: 100%;
+    .inputCont{
+        flex-basis: 100%;
+        padding: 1em;
+        position: sticky;
+        top: 0;
+        left: 0;
+        background-color: rgba(238,238,238,0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        input{
+            flex-basis: 50%;
+        }
+    }
 }
 
 .wrapper{
