@@ -17,11 +17,11 @@ export const Shop:React.FC = () => {
             changeFilter(value)
             if(value[0] != '#'){
                 setProductDisplay(_.filter(products, o => {
-                    return o.name.includes(value.toLowerCase())
+                    return o.name.toLowerCase().includes(value.toLowerCase())
                 }))
             }else{
                 setProductDisplay(_.filter(products, o => {
-                    return o.type.includes(value.match(/[^#]*$/)[0].toLowerCase())
+                    return o.type.toLowerCase().includes(value.match(/[^#]*$/)[0].toLowerCase())
                 }))
             }
         } catch(err){
@@ -46,7 +46,7 @@ export const Shop:React.FC = () => {
                         return <TileProduct key={index} id={index} name={obj.name} price={obj.price} state={obj.state} imgAdress={obj.imgAdress} seller={obj.seller} desc={obj.desc} type={obj.type} />
                     })
                     :
-                    <h2>Koszyk jest pusty</h2>
+                    <h2>Brak towarów</h2>
                 }
             </main>
         </div>
