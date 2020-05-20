@@ -120,7 +120,7 @@ export const ProductPage: React.FC = (props: any) => {
             </section>
             <section id="description" className="description">
               <h3>opis</h3>
-              <p>{product.desc}</p>
+              <p style={{wordWrap:"break-word"}}>{product.desc}</p>
             </section>
             <ProductSlider productId={props.match.params.id} />
             <ProductUnvaluedInfo info="Gwarancja" detail="Gwarancja z tytułu rękojmi na okres 12 miesięcy"/>
