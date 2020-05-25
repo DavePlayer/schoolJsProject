@@ -8,6 +8,8 @@
     scroll-behavior: smooth;
 }
 
+*,button:focus {outline:0;}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -297,6 +299,92 @@ button:active{
     }
     .right{
         flex-basis: 35%;
+    }
+}
+
+.contactHolder {
+    width: 100%;
+    padding-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #1D1D1D;
+    .holderImg{
+        flex-basis: 100%;
+        height: 30em;
+        background-color: #262626;
+        text-align: center;
+        .imgPlaceholder{
+            margin-top: 4em;
+            font-size: 10em;
+        }
+        div{
+            color: white;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h1,h3{
+                color: #20F298;
+            }
+            h1{
+                font-size: 3em;
+            }
+            .qustion{
+                font-size: 10em;
+                color: rgb(29, 204, 128);
+            }
+        }
+    }
+    .arrowDown{
+        flex-basis: 100%;
+        text-align: center;
+        font-size: 3em;
+        background-color: #262626;
+        color: white;
+    }
+    .mailHolder{
+        flex-basis: 80%;
+        margin-top: 5em;
+        div{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        input,textarea{
+            border: none;
+            background-color: #ccc;
+            color: black;
+        }
+        input{
+            flex-basis: 30%;
+            margin-top: 2em;
+            &.topic{
+                width: 40%;
+            }
+        }
+        textarea{
+            margin-top: 2em;
+            width: 100%;
+            height: 20em;
+        }
+        .buttonHolder{
+            display: flex;
+            justify-content: flex-end;
+            button{
+                flex-basis: 20%;
+                border: none;
+                background-color: #353535;
+                color: rgb(29, 204, 128);
+                margin-top: 1em;
+                &:active{
+                    background-color: #474747;
+                }
+            }
+        }
     }
 }
 

@@ -12,6 +12,7 @@ import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { loadFromLocalStorage } from './actions/loadFromLocalStorage'
 import { loadTrolleyFromLocalStorage } from './actions/loadTrolleyFromLocalStorage'
+import { Contact } from './reducers/contact'
 
 export const App:React.FC = () => {
     const Test = PageHolder
@@ -23,7 +24,7 @@ export const App:React.FC = () => {
                 <Route path="/schoolJsProject/shop" exact render={() => <PageHolder children={<Shop />} />} />
                 <Route path="/schoolJsProject/trolley" exact render={() => <PageHolder children={<TrolleyPage />} />} />
                 <Route path="/schoolJsProject/shop/:id" component={ProductPage} />
-                <Route path="/schoolJsProject/contact" exact render={() => <PageHolder /> } />
+                <Route path="/schoolJsProject/contact" exact render={() => <PageHolder children={<Contact />} /> } />
                 <Route component={err404} />
             </Switch>
         </Router>
