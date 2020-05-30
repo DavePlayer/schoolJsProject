@@ -1086,11 +1086,18 @@ footer{
     @include phone {
         flex-direction: column;
     }
+    @include tablet {
+        flex-direction: column;
+    }
     h4{
         font-size: 1.3em;
         margin-bottom: 3em;
         font-weight: 500;
         @include phone {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;  
+        }
+        @include tablet {
             font-size: 1.5em;
             margin-bottom: 0.5em;  
         }
@@ -1104,11 +1111,26 @@ footer{
             font-size: 2em;
             margin-bottom: 2em;
         }
+        @include tablet {
+            order: 1;
+            width: 100%;
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 2em;
+        }
     }
     .ContactUs{
         flex-basis: 17%;
         margin-left: 2em;
         @include phone {
+            order: 2;
+            width: 100%;
+            text-align: center;
+            font-size: 2em;
+            margin-left: 0;
+            margin-bottom: 2em;
+        }
+        @include tablet {
             order: 2;
             width: 100%;
             text-align: center;
@@ -1134,10 +1156,24 @@ footer{
             text-align: center;
             font-size: 2em;
             margin-left: 0;
-        }        
+        }   
+        @include tablet {
+            order: 3;
+            width: 100%;
+            text-align: center;
+            font-size: 2em;
+            margin-left: 0;
+        }       
     }
     .SocialLinks{
         @include phone {
+            width: 100%;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 1em;
+            order: 0;
+        }
+        @include tablet {
             width: 100%;
             text-align: center;
             font-size: 2.5em;
