@@ -440,6 +440,9 @@ button:active{
         @include phone {
             height: 70em;
         }
+        @include tablet {
+            height: 70em;
+        }
         background-color: #262626;
         text-align: center;
         .imgPlaceholder{
@@ -457,14 +460,23 @@ button:active{
             @include phone {
                 font-size: 1.5em;
             }
+            @include tablet {
+                font-size: 1.5em;
+            }
             h1,h3{
                 color: #20F298;
                 @include phone {
                     font-size: 1.5em;
                 }
+                @include tablet {
+                    font-size: 1.5em;
+                }
             }
             h3 {
                 @include phone {
+                    font-weight: 300;
+                }
+                @include tablet {
                     font-weight: 300;
                 }
             }
@@ -489,10 +501,20 @@ button:active{
         @include phone {
             flex-basis: 90%;  
         }
+        @include tablet {
+            flex-basis: 90%;  
+        }
         margin-top: 5em;
         div{
             display: flex;
             @include phone {
+                flex-direction: column;
+                align-items: center;
+                input{
+                    width: 75%;
+                }
+            }
+            @include tablet {
                 flex-direction: column;
                 align-items: center;
                 input{
@@ -509,6 +531,9 @@ button:active{
             @include phone{
                 font-size: 2em;
             }
+            @include tablet{
+                font-size: 2em;
+            }
         }
         input{
             flex-basis: 30%;
@@ -516,6 +541,10 @@ button:active{
             &.topic{
                 width: 40%;
                 @include phone {
+                    width: 100%;
+                    margin-top: 5em;
+                }
+                @include tablet {
                     width: 100%;
                     margin-top: 5em;
                 }
@@ -532,6 +561,9 @@ button:active{
             button{
                 flex-basis: 20%;
                 @include phone {
+                    font-size: 3em;
+                }
+                @include tablet {
                     font-size: 3em;
                 }
                 border: none;
@@ -559,6 +591,9 @@ button:active{
     z-index: 2;
     padding: 1em;
     @include phone {
+        padding: 2em;
+    }
+    @include tablet {
         padding: 2em;
     }
     background-color: #353535;
@@ -598,9 +633,6 @@ button:active{
             }
             @include tablet {
                 display: none;
-            }
-            @include sml-scr() {
-                display: flex;
             }
             width: 100%;
             height: 100%;
