@@ -437,6 +437,9 @@ button:active{
     .holderImg{
         flex-basis: 100%;
         height: 30em;
+        @include phone {
+            height: 70em;
+        }
         background-color: #262626;
         text-align: center;
         .imgPlaceholder{
@@ -451,8 +454,19 @@ button:active{
             display: flex;
             flex-direction: column;
             justify-content: center;
+            @include phone {
+                font-size: 1.5em;
+            }
             h1,h3{
                 color: #20F298;
+                @include phone {
+                    font-size: 1.5em;
+                }
+            }
+            h3 {
+                @include phone {
+                    font-weight: 300;
+                }
             }
             h1{
                 font-size: 3em;
@@ -472,9 +486,19 @@ button:active{
     }
     .mailHolder{
         flex-basis: 80%;
+        @include phone {
+            flex-basis: 90%;  
+        }
         margin-top: 5em;
         div{
             display: flex;
+            @include phone {
+                flex-direction: column;
+                align-items: center;
+                input{
+                    width: 75%;
+                }
+            }
             flex-wrap: wrap;
             justify-content: space-between;
         }
@@ -482,12 +506,19 @@ button:active{
             border: none;
             background-color: #ccc;
             color: black;
+            @include phone{
+                font-size: 2em;
+            }
         }
         input{
             flex-basis: 30%;
             margin-top: 2em;
             &.topic{
                 width: 40%;
+                @include phone {
+                    width: 100%;
+                    margin-top: 5em;
+                }
             }
         }
         textarea{
@@ -500,6 +531,9 @@ button:active{
             justify-content: flex-end;
             button{
                 flex-basis: 20%;
+                @include phone {
+                    font-size: 3em;
+                }
                 border: none;
                 background-color: #353535;
                 color: rgb(29, 204, 128);
