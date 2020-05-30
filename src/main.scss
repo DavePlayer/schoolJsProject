@@ -770,6 +770,12 @@ main{
         font-size: 1.5em;
         font-weight: 500;
     }
+    @include tablet {
+        width: 100%;
+        padding: 1em;
+        font-size: 1.5em;
+        font-weight: 500;
+    }
     h1{
         width: 100%;
     }
@@ -787,10 +793,16 @@ main{
         @include phone {
             padding: 0.5em;
         }
+        @include tablet {
+            padding: 0.5em;
+        }
         figure{
             height: 100%;
             width: 20%;
             @include phone {
+                width: 30%;
+            }
+            @include tablet {
                 width: 30%;
             }
             display: flex;
@@ -804,12 +816,18 @@ main{
         .list{
             @include phone {
                 display: none;
-            }  
+            }
+            @include tablet {
+                display: none;
+            } 
         }
         .seller{
             @include phone {
                 display: none;
             } 
+            @include tablet {
+                display: none;
+            }
         }
         .showOffs{
             display: flex;
@@ -846,6 +864,11 @@ main{
                 padding: 0;
                 padding-left: 0.5em;
             }
+            @include tablet {
+                flex-basis: 70%;
+                padding: 0;
+                padding-left: 0.5em;
+            }
             .productName{
                 font-size: 1.3em;
                 font-weight: 400;
@@ -856,6 +879,9 @@ main{
         }
         .importants{
             @include phone {
+                display: none;
+            }
+            @include tablet {
                 display: none;
             }
             height: 100%;
@@ -901,9 +927,16 @@ main{
         @include phone {
             top: 11.3em;
         }
+        @include tablet {
+            top: 11.3em;
+        }
         input{
             flex-basis: 50%;
             @include phone {
+                font-size: 2.5em;
+                flex-basis: 90%;
+            }
+            @include tablet {
                 font-size: 2.5em;
                 flex-basis: 90%;
             }
