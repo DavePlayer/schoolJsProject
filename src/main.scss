@@ -612,6 +612,7 @@ button:active{
         font-weight: 500;
         letter-spacing: 1px;
         font-size: 3em;
+        user-select: none;
         a{
             @include phone {
                 font-size: 2em;
@@ -763,6 +764,12 @@ main{
     width: 80%;
     row-gap: 3em;
     justify-content: center;
+    @include phone {
+        width: 100%;
+        padding: 1em;
+        font-size: 1.5em;
+        font-weight: 500;
+    }
     h1{
         width: 100%;
     }
@@ -777,9 +784,15 @@ main{
         display: flex;
         justify-content: space-around;
         padding: 1em;
+        @include phone {
+            padding: 0.5em;
+        }
         figure{
             height: 100%;
             width: 20%;
+            @include phone {
+                width: 30%;
+            }
             display: flex;
             justify-content: center;
             align-items: center;
@@ -787,6 +800,16 @@ main{
                 border-radius: 1em;
                 width: 100%;
             }
+        }
+        .list{
+            @include phone {
+                display: none;
+            }  
+        }
+        .seller{
+            @include phone {
+                display: none;
+            } 
         }
         .showOffs{
             display: flex;
@@ -801,13 +824,30 @@ main{
                 }
             }
         }
+        .phonePrice{
+            font-size: 1.5em;
+            @include sml-scr {
+                display: none;
+            }
+            @include larg-scr() {
+                display: none;
+            }
+        }
         .info{
             flex-basis: 50%;
             font-size: 1.2em;
             height: 100%;
             padding: 1em;
+            &:active .productName{
+                color: #0E7348;
+            }
+            @include phone {
+                flex-basis: 70%;
+                padding: 0;
+                padding-left: 0.5em;
+            }
             .productName{
-                font-size: 1.5em;
+                font-size: 1.3em;
                 font-weight: 400;
             }
             ul{
@@ -815,6 +855,9 @@ main{
             }
         }
         .importants{
+            @include phone {
+                display: none;
+            }
             height: 100%;
             flex-basis: 20%;
             .price{
@@ -849,14 +892,21 @@ main{
         flex-basis: 100%;
         padding: 1em;
         position: sticky;
-        top: 0;
+        top: 6em;
         left: 0;
         background-color: rgba(238,238,238,0.5);
         display: flex;
         justify-content: center;
         align-items: center;
+        @include phone {
+            top: 11.3em;
+        }
         input{
             flex-basis: 50%;
+            @include phone {
+                font-size: 2.5em;
+                flex-basis: 90%;
+            }
         }
     }
 }
