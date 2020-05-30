@@ -5,7 +5,7 @@
   "main": "index.tsx",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --open --hot",
+    "start": "webpack-dev-server --open --hot --host 0.0.0.0",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -46,6 +46,7 @@
     "@types/redux": "^3.6.0",
     "css-loader": "^3.4.2",
     "react-redux": "^7.2.0",
+    "react-spring": "^8.0.27",
     "redux": "^4.0.0",
     "style-loader": "^1.1.3"
   }

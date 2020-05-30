@@ -1,5 +1,26 @@
 @import "~bootstrap/scss/bootstrap";
 
+@mixin phone{
+    @media only screen and (max-device-width: 768px){
+        @content;
+    }
+}
+@mixin tablet{
+    @media only screen and (min-device-width: 769px) and (max-device-width: 992px){
+        @content;
+    }
+}
+@mixin sml-scr{
+    @media only screen and (min-device-width: 993px)  and (max-device-width: 1200px){
+        @content;
+    }
+}
+@mixin larg-scr{
+    @media only screen and (min-device-width: 1201px){
+        @content;
+    }
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -53,6 +74,12 @@ button:active{
         height: 32em;
         background-color: #262626;
         text-align: center;
+        @include phone {
+            height: 70em;
+        }
+        @include tablet {
+            height: 90em;
+        }
         .imgPlaceholder{
             margin-top: 4em;
             font-size: 10em;
@@ -64,6 +91,13 @@ button:active{
             display: flex;
             justify-content: center;
             align-items: center;
+            @include phone {
+                img{
+                    transform: scale(1.7);
+                    min-width: 200%;
+                }
+                margin-bottom: 0;
+            }
         }
     }
     .info{
@@ -78,6 +112,12 @@ button:active{
             text-align: center;
             padding: 0.3em;
             font-size: 5em;
+            @include phone{
+                font-size: 8em;
+            }
+            @include tablet{
+                font-size: 8em;
+            }
         }
         h2{
             margin-bottom: 1em;
@@ -85,6 +125,16 @@ button:active{
             color: #20F298;
             font-weight: 100;
             font-size: 2em;
+            @include phone {
+                font-size: 7em;
+                font-weight: 300;
+                letter-spacing: 2px; 
+            }
+            @include tablet {
+                font-size: 7em;
+                font-weight: 300;
+                letter-spacing: 2px; 
+            }
         }
 
         aside{
@@ -97,15 +147,37 @@ button:active{
                 font-weight: 400;
                 font-size: 2em;
                 margin-bottom: 1.5em;
+                @include phone {
+                    font-size: 5em;
+                    margin-bottom: 0;
+                }
+                @include tablet {
+                    font-size: 5em;
+                    margin-bottom: 0;
+                }
             }
             border-radius: 1em;
             flex-basis: 30%;
+            @include phone {
+                flex-basis: 100%;
+                order: 1;
+            }
+            @include tablet {
+                flex-basis: 100%;
+                order: 1;
+            }
             figure{
                 width: 60%;
                 margin: auto;
                 img{
                     width: 100%;
                     height: 100%;
+                    @include phone{
+                        transform: scale(0.7);
+                    }
+                    @include tablet{
+                        transform: scale(0.7);
+                    }
                 }
                 margin-bottom: 1.5em;
             }
@@ -113,6 +185,12 @@ button:active{
                 font-size: 1.3em;
                 text-align: center;
                 margin-bottom: 2em;
+                @include phone {
+                    font-size: 3em;
+                }
+                @include tablet {
+                    font-size: 3em;
+                }
             }
             .stockInfo{
                 display: flex;
@@ -120,6 +198,12 @@ button:active{
                 margin-bottom: 1em;
                 .stock{
                     font-size: 1.5em;
+                    @include phone {
+                        font-size: 3em;
+                    }
+                    @include tablet {
+                        font-size: 3em;
+                    }
                     flex-basis: 50%;
                 &:nth-of-type(even){
                     text-align: end;
@@ -128,6 +212,13 @@ button:active{
             }
             .progress{
                 margin-bottom: 2em;
+                height: 5em;
+                    @include phone {
+                        height: 10em;
+                    }
+                    @include tablet {
+                        height: 10em;
+                    }
             }
             .priceContainer{
                 width: 100%;
@@ -137,6 +228,16 @@ button:active{
                 align-items: center;
                 h5{
                     font-size: 2.5em;
+                    @include phone{
+                        font-size: 5em;
+                        flex-direction: column;
+                        text-align: center;
+                    }
+                    @include tablet{
+                        font-size: 5em;
+                        flex-direction: column;
+                        text-align: center;
+                    }
                     width: 100%;
                     text-align: center;
                     display: flex;
@@ -149,6 +250,12 @@ button:active{
                     }
                     .promotion{
                         margin-left: 0.5em;
+                        @include phone {
+                            margin-left: 0;
+                        }
+                        @include tablet {
+                            margin-left: 0;
+                        }
                         color: rgb(29, 204, 128);
                     }
                 }
@@ -157,9 +264,26 @@ button:active{
 
         article{
             flex-basis: 60%;
+            @include phone {
+                flex-basis: 100%;
+                order: 0;
+            }
+            @include tablet {
+                flex-basis: 100%;
+                order: 0;
+            }
             p{
                 margin-bottom: 2em;
                 font-size: 1.5em;
+                text-align: justify;
+                @include phone {
+                    padding: 1em;
+                    font-size: 2.5em;
+                }
+                @include tablet {
+                    padding: 1em;
+                    font-size: 2.5em;
+                }
             }
         }
     }
@@ -388,9 +512,21 @@ button:active{
     }
 }
 
+.wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(121, 121, 121, 0.5);
+}
 .navigation{
     display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
     padding: 1em;
+    @include phone {
+        padding: 2em;
+    }
     background-color: #353535;
     color: white !important;
     border-bottom: 2px solid #20F298;
@@ -407,12 +543,31 @@ button:active{
         font-weight: 500;
         letter-spacing: 1px;
         font-size: 3em;
+        a{
+            @include phone {
+                font-size: 2em;
+                margin-bottom: 0;
+            }
+            @include tablet {
+                font-size: 2em;
+                margin-bottom: 0;
+            }
+        }
     }
     nav{
         flex-basis: 46%;
         margin-left: auto;
         margin-right: 3%;
         ul{
+            @include phone {
+                display: none;
+            }
+            @include tablet {
+                display: none;
+            }
+            @include sml-scr() {
+                display: flex;
+            }
             width: 100%;
             height: 100%;
             justify-content: space-around;
@@ -428,8 +583,60 @@ button:active{
         .nav-cart{
             margin: 0.3em;
         }
+        .menuButton{
+            @include sml-scr{
+                display: none;
+            }
+            @include larg-scr(){
+                display: none;
+            }
+            span {
+                height: 100%;
+                font-size: 7em;
+                text-align: end;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                user-select: none;
+            }
+        }
+    }
+    .navDrawer{
+        width: 80%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: -2em;
+        background-color: #3d3d3d;
+        .XSpace{
+            padding: 1em;
+            span{
+                width: 100%;
+                text-align: end;
+                font-size: 6em;
+                user-select: none;
+            }
+        }
+        ul{
+            height: 100%;
+            font-size: 3em;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            li{
+                padding: 1em;
+                a{
+                    text-align: center;
+                    span{
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
     }
 }
+
 
 main{
     width: 80%;
@@ -876,17 +1083,39 @@ footer{
     display: flex;
     color: white;
     column-gap: 3%;
+    @include phone {
+        flex-direction: column;
+    }
     h4{
         font-size: 1.3em;
         margin-bottom: 3em;
         font-weight: 500;
+        @include phone {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;  
+        }
     }
     .buySth{
         flex-basis: 17%;
+        @include phone {
+            order: 1;
+            width: 100%;
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 2em;
+        }
     }
     .ContactUs{
         flex-basis: 17%;
         margin-left: 2em;
+        @include phone {
+            order: 2;
+            width: 100%;
+            text-align: center;
+            font-size: 2em;
+            margin-left: 0;
+            margin-bottom: 2em;
+        }
         .contactParagraph{
             margin-top: 1em;
             color: #0E7348;
@@ -899,9 +1128,22 @@ footer{
     .CopyRigths{
         flex-basis: 12%;
         margin-left: 2em;
-        
+        @include phone {
+            order: 3;
+            width: 100%;
+            text-align: center;
+            font-size: 2em;
+            margin-left: 0;
+        }        
     }
     .SocialLinks{
+        @include phone {
+            width: 100%;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 1em;
+            order: 0;
+        }
         margin-left: auto;
         flex-basis: 40%;
         text-align: right;

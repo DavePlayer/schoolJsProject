@@ -18,7 +18,7 @@ export const Home:React.FC = () => {
                         <div className="stock">Pozostało: 23</div>
                         <div className="stock">Sprzedano: 9</div>
                     </div>
-                    <div className="progress" style={{height: "5em"}}>
+                    <div className="progress">
                         <div className="progress-bar" role="progressbar" style={{width: '73%', height: "5em", backgroundColor: "#20F298"}} aria-valuenow={25} aria-valuemin={0} aria-valuemax={100}></div>
                     </div>
                     <div className="priceContainer">
@@ -32,7 +32,7 @@ export const Home:React.FC = () => {
                     <p>Naszą pracę wspomaga sztuczna inteligencja "Banana Encounter" naszego pomysłu zaprojektowana by wyciągać z was jak najwięcej informacji w celach reklamowych. Nie trzeba się jadnak obawiać, ponieważ wszystko jest sprawdzane przez nasz zespól do tego przeznaczony. Tak, wiemy co kupiliście! Nawet poza naszym sklepem.</p>
                     <p>Przymusowo w tym sklepie od czasu do czasu można zauważyć reklamy. Jednak nie bójcie się! Zostały one zaprojektowane z myślą by nie odstraszać klientów od razu po ich spostrzeżeniu. Zazwyczaj są to promocje z cen droższych na ceny rynkowe więc nie musicie się obawiać, że co kolwiek tutaj będzie tańsze niż bułka z serem za 25zł.</p>
                     <p>Pamiętaj aby pić wodę! Zawsze dbamy o naszych klientów.</p>
-                    </article>
+                </article>
             </div>
         </div>
     )
