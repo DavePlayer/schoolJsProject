@@ -98,6 +98,13 @@ button:active{
                 }
                 margin-bottom: 0;
             }
+            @include tablet {
+                img{
+                    transform: scale(1.7);
+                    min-width: 200%;
+                }
+                margin-bottom: 0;
+            }
         }
     }
     .info{
@@ -298,6 +305,10 @@ button:active{
         font-size: 2em;
         flex-direction: column;
     }
+    @include tablet {
+        font-size: 2em;
+        flex-direction: column;
+    }
     .left,.right{
         flex-basis: 65%;
         padding: 1em;
@@ -355,9 +366,9 @@ button:active{
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    overflow: hidden;
                     img{
                         width: 100%;
-                        max-height: 100%;
                     }
                 }
                 .info{
@@ -383,6 +394,11 @@ button:active{
                         bottom: 1em;
                         right: 1em;
                     }
+                    @include tablet{
+                        position: absolute;
+                        bottom: 1em;
+                        right: 1em;
+                    }
                     span{
                         font-size: 3em;
                         flex-basis: 100%;
@@ -397,6 +413,9 @@ button:active{
                         @include phone {
                             display: none;
                         }
+                        @include tablet {
+                            display: none;
+                        }
                     }
                 }
             }
@@ -409,6 +428,9 @@ button:active{
             flex-wrap: wrap;
             padding: 1em;
             @include phone {
+                display: none;
+            }
+            @include tablet {
                 display: none;
             }
             background-color: #fff;
@@ -437,12 +459,21 @@ button:active{
             @include phone {
                 display: none;
             }
+            @include tablet {
+                display: none;
+            }
         }
     }
     .right{
         flex-basis: 35%;
     }
     .bottom{
+        @include larg-scr{
+            display: none;
+        }
+        @include sml-scr{
+            display: none;
+        }
         width: 95%;
         padding: 0.5em;
         display: flex;
@@ -1089,6 +1120,10 @@ main{
         flex-direction: column;
         width: 95%;
     }
+    @include tablet {
+        flex-direction: column;
+        width: 95%;
+    }
     *{
         border-radius: 3px;
         background-color: #fff;
@@ -1097,6 +1132,10 @@ main{
         flex-basis: 65%;
         display: flex;
         @include phone {
+            flex-basis: 95%;
+            flex-direction: column;
+        }
+        @include tablet {
             flex-basis: 95%;
             flex-direction: column;
         }
@@ -1113,6 +1152,9 @@ main{
             padding: 1em;
             flex-basis: 60%;
             @include phone {
+                font-size: 2em;
+            }
+            @include tablet {
                 font-size: 2em;
             }
             h2{
@@ -1158,6 +1200,9 @@ main{
         @include phone {
             font-size: 2em;
         }
+        @include tablet {
+            font-size: 2em;
+        }
         h3{
             font-size: 1.5em;
             display: block;
@@ -1176,6 +1221,9 @@ main{
             @include phone {
                 margin-top: 1em;
             }
+            @include tablet {
+                margin-top: 1em;
+            }
             .grey{
                 display: block;
                 color: #888;
@@ -1188,6 +1236,9 @@ main{
                 @include phone {
                     font-size: 1.5em;
                 }
+                @include tablet {
+                    font-size: 1.5em;
+                }
             }
         }
         .cont{
@@ -1198,6 +1249,9 @@ main{
                 flex-basis: 70%;
                 background-color: #353535;
                 @include phone {
+                    font-size: 1.5em;
+                }
+                @include tablet {
                     font-size: 1.5em;
                 }
             }
@@ -1225,6 +1279,11 @@ main{
             padding: 1em;
             text-align: justify;
         }
+        @include tablet {
+            font-size: 2em;
+            padding: 1em;
+            text-align: justify;
+        }
     }
     .productSlider{
         flex-basis: 95%;
@@ -1235,6 +1294,9 @@ main{
             flex-basis: 100%;
             width: 100%;
             @include phone{
+                font-size: 3em;
+            }
+            @include tablet{
                 font-size: 3em;
             }
         }
@@ -1254,12 +1316,27 @@ main{
                 max-width: 100%;
                 font-size: 2em;
             }
+            @include tablet {
+                white-space: nowrap;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                max-width: 100%;
+                font-size: 2em;
+            }
         }
         .proposition{
             flex-basis: 20%;
             text-align: center;
             cursor: pointer;
             @include phone {
+                width: 100%;
+                flex-basis: 50%;
+                margin-left: 1em;
+            }
+            @include tablet {
                 width: 100%;
                 flex-basis: 50%;
                 margin-left: 1em;
@@ -1306,9 +1383,15 @@ main{
         @include phone {
             padding: 1em;
         }
+        @include tablet {
+            padding: 1em;
+        }
         h3{
             flex-basis: 50%;
             @include phone {
+                font-size: 4em;
+            }
+            @include tablet {
                 font-size: 4em;
             }
         }
@@ -1316,6 +1399,10 @@ main{
             text-align: center;
             flex-basis: 100%;
             @include phone {
+                font-size: 2em;
+                padding-top: 1em;
+            }
+            @include tablet {
                 font-size: 2em;
                 padding-top: 1em;
             }
