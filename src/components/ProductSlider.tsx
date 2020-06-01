@@ -17,25 +17,27 @@ export const ProductSlider:React.FC<IProps> = (props:IProps) => {
     return(
         <section className="productSlider">
             <h3>Te produkty mogą ci się spodobać</h3>
-            {products.length > 0 ? 
-                products.length >= 4 ?
-                    _.filter(products, (o:any) => {
-                        return o.id != props.productId
-                    }).slice(reand, reand+3).map(o => {
-                        console.log(o)
-                        return <ProposedProducts key={o.id} data={o}/>
-                    })
+            <div className="productContainerr">
+                {products.length > 0 ? 
+                    products.length >= 4 ?
+                        _.filter(products, (o:any) => {
+                            return o.id != props.productId
+                        }).slice(reand, reand+3).map(o => {
+                            console.log(o)
+                            return <ProposedProducts key={o.id} data={o}/>
+                        })
+                        :
+                        _.filter(products, (o:any) => {
+                            console.log(o.id, props.productId)
+                            if(o.id != props.productId) return o
+                        }).map((o:any) => {
+                            console.log(o)
+                            return <ProposedProducts key={o.id} data={o}/>
+                        })    
                     :
-                    _.filter(products, (o:any) => {
-                        console.log(o.id, props.productId)
-                        if(o.id != props.productId) return o
-                    }).map((o:any) => {
-                        console.log(o)
-                        return <ProposedProducts key={o.id} data={o}/>
-                    })     
-                :
-                <h3>Brak produktów w koszyku</h3>
-            }
+                    <h3>Brak produktów w koszyku</h3>
+                }
+            </div>
             
         </section>
     )

@@ -15,7 +15,7 @@ export const ProposedProducts:React.FC<Iprops> = (props:Iprops) => {
         <article onClick={() => handleClick()} className="proposition">
             <figure><img src={props.data.imgAdress} alt="product"/></figure>
             <p className="price">{props.data.price} zł</p>
-            <p className="productName">{props.data.name}...</p>
+            <p className="productName">{props.data.name.slice(0, 32)}...</p>
             <p className="unknown">{props.data.price + Math.floor(Math.random()*24)+13} z dostawą</p>
             <p className="unknown">kupiło {Math.floor((Math.random()*14)+17)}</p>
         </article>

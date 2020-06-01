@@ -5,13 +5,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { Iproducts } from "./reducers/products";
 import { Istate } from "./reducers/combined";
 import * as _ from "lodash";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { loadFromLocalStorage } from "./actions/loadFromLocalStorage";
 import { loadTrolleyFromLocalStorage } from "./actions/loadTrolleyFromLocalStorage";
-import { Product } from "./product";
 import { moveToTrolley } from "./actions/moveToTrolley";
 import { deleteProduct } from "./actions/deleteProduct";
-import { Link, useHistory } from "react-router-dom";
 import { ProductUnvaluedInfo } from "./ProductUnvaluedInfo";
 import { ProductSlider } from "./ProductSlider";
 

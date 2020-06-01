@@ -395,7 +395,6 @@ button:active{
             align-items: center;
             flex-wrap: wrap;
             padding: 1em;
-            max-height: 12em;
             background-color: #fff;
             p{
                 flex-basis: 70%;
@@ -1052,6 +1051,10 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    @include phone {
+        flex-direction: column;
+        width: 95%;
+    }
     *{
         border-radius: 3px;
         background-color: #fff;
@@ -1059,6 +1062,10 @@ main{
     .mainSection{
         flex-basis: 65%;
         display: flex;
+        @include phone {
+            flex-basis: 95%;
+            flex-direction: column;
+        }
         figure{
             flex-basis: 55%;
             padding: 1em;
@@ -1071,6 +1078,9 @@ main{
         .info{
             padding: 1em;
             flex-basis: 60%;
+            @include phone {
+                font-size: 2em;
+            }
             h2{
                 font-size: 1.5em;
                 font-weight: 540;
@@ -1111,6 +1121,9 @@ main{
         flex-basis: 25%;
         height: 15em;
         padding: 1em;
+        @include phone {
+            font-size: 2em;
+        }
         h3{
             font-size: 1.5em;
             display: block;
@@ -1126,6 +1139,9 @@ main{
             margin-top: 5em;
             display: flex;
             align-items: center;
+            @include phone {
+                margin-top: 1em;
+            }
             .grey{
                 display: block;
                 color: #888;
@@ -1135,6 +1151,9 @@ main{
             h4{
                 flex-basis: 50%;
                 text-align: center;
+                @include phone {
+                    font-size: 1.5em;
+                }
             }
         }
         .cont{
@@ -1144,6 +1163,9 @@ main{
             button{
                 flex-basis: 70%;
                 background-color: #353535;
+                @include phone {
+                    font-size: 1.5em;
+                }
             }
             .numberOf{
                 padding: 1em;
@@ -1155,28 +1177,59 @@ main{
         }
     }
     .description{
+        h3 {
+            font-size: 2em;
+        }
         flex-basis: 95%;
         overflow: hidden;
         margin-top: 3em;
         padding: 3em;
         text-align: inherit;
         white-space: pre-wrap;
+        @include phone {
+            font-size: 2em;
+            padding: 1em;
+            text-align: justify;
+        }
     }
     .productSlider{
         flex-basis: 95%;
         margin-top: 1em;
         padding: 1em;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
+        width: 100%;
         h3{
             flex-basis: 100%;
+            width: 100%;
+            @include phone{
+                font-size: 3em;
+            }
+        }
+        .productContainerr{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            @include phone {
+                white-space: nowrap;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                max-width: 100%;
+                font-size: 2em;
+            }
         }
         .proposition{
             flex-basis: 20%;
             text-align: center;
             cursor: pointer;
+            @include phone {
+                width: 100%;
+                flex-basis: 50%;
+                margin-left: 1em;
+            }
             figure{
                 width: 100%;
                 height: 15em;
@@ -1184,10 +1237,10 @@ main{
                 position: relative;
                 img{
                     position: absolute;
-                    bottom: 15%;
+                    top: 15%;
                     left: 0;
                     width: 100%;
-
+                    transform: scale(1.5);
                 }
             }
             .price{
@@ -1198,6 +1251,7 @@ main{
             }
             .productName{
                 text-align: left;
+                word-wrap: break-word;
             }
             .unknown{
                 color: rgb(126, 126, 126);
@@ -1215,12 +1269,22 @@ main{
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+        @include phone {
+            padding: 1em;
+        }
         h3{
             flex-basis: 50%;
+            @include phone {
+                font-size: 4em;
+            }
         }
         .Details{
             text-align: center;
             flex-basis: 100%;
+            @include phone {
+                font-size: 2em;
+                padding-top: 1em;
+            }
         }
     }
 }
