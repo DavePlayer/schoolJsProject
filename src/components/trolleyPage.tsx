@@ -76,6 +76,10 @@ export const TrolleyPage:React.FC = () => {
                         <article className="useless">Dodaj kod rabatowy</article>
                         <article className="useless">Dodaj kartę podarunkową</article>
                     </section>
+                    <section className="bottom">
+                        <button>Na raty</button>
+                        <button>Do Kasy</button>
+                    </section>
                 </article>
         </>
     )
