@@ -2,7 +2,7 @@ import * as React from 'react'
 import './../main'
 import { Nav } from './nav'
 import { Footer } from './footer'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, HashRouter } from 'react-router-dom'
 import { AdminPanel } from './adminPanel'
 import { Home } from './Home'
 import { Shop } from './shop'
@@ -19,13 +19,15 @@ export const App:React.FC = () => {
     return (
         <Router> 
             <Switch>
-                <Route path="/schoolJsProject/" exact render={() => <Test children={<Home />}/>} />
-                <Route path="/schoolJsProject/admin" exact render={() => <PageHolder children={<AdminPanel />}/>} />
-                <Route path="/schoolJsProject/shop" exact render={() => <PageHolder children={<Shop />} />} />
-                <Route path="/schoolJsProject/trolley" exact render={() => <PageHolder children={<TrolleyPage />} />} />
-                <Route path="/schoolJsProject/shop/:id" component={ProductPage} />
-                <Route path="/schoolJsProject/contact" exact render={() => <PageHolder children={<Contact />} /> } />
-                <Route component={err404} />
+                <HashRouter basename="schoolJsProject">
+                    <Route path="/" exact render={() => <Test children={<Home />}/>} />
+                    <Route path="/admin" exact render={() => <PageHolder children={<AdminPanel />}/>} />
+                    <Route path="/shop" exact render={() => <PageHolder children={<Shop />} />} />
+                    <Route path="/trolley" exact render={() => <PageHolder children={<TrolleyPage />} />} />
+                    <Route path="/shop/:id" component={ProductPage} />
+                    <Route path="/contact" exact render={() => <PageHolder children={<Contact />} /> } />
+                    <Route component={err404} />
+                </ HashRouter>
             </Switch>
         </Router>
     )

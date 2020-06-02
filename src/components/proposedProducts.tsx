@@ -9,7 +9,7 @@ interface Iprops {
 export const ProposedProducts:React.FC<Iprops> = (props:Iprops) => {
     const history = useHistory();
     const handleClick = () => {
-        history.push(`/schoolJsProject/shop/${props.data.id}`)
+        history.push(`/shop/${props.data.id}`)
     }
     return(
         <article onClick={() => handleClick()} className="proposition">

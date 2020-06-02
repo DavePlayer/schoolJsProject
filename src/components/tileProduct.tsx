@@ -14,7 +14,7 @@ export const TileProduct:React.FC<Iproducts> = (props:Iproducts) => {
     const history = useHistory()
     const goTopage = () => {
         if(window.innerWidth < 993)
-        history.push(`/schoolJsProject/shop/${props.id}`)
+        history.push(`/shop/${props.id}`)
     }
 
     return(
@@ -41,7 +41,7 @@ export const TileProduct:React.FC<Iproducts> = (props:Iproducts) => {
             <p className="price">Cena: {props.price}</p>
             <p>U ciebie za <span className="red">{Math.floor((Math.random()*14)+17)} dni</span></p>
             <p><span className="blue">{Math.floor(Math.random()*4)+1} oferty</span> od {props.price -Math.floor(Math.random()*24)+13} zł</p>
-            <Link to={`/schoolJsProject/shop/${props.id}`}><button>Dodaj do koszyka</button></Link>   
+            <Link to={`/shop/${props.id}`}><button>Dodaj do koszyka</button></Link>   
         </section>
     </article>
     )

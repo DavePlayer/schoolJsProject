@@ -48,12 +48,12 @@ export const Nav:React.FC = () => {
             <nav>
             <div className="menuButton" onClick={() => changeDrawerActive( (prev) => !prev)}><span className="material-icons">menu</span></div>
                 <ul>
-                    <li><Link to='/schoolJsProject/'>Strona Główna</Link></li>
-                    <li><Link to='/schoolJsProject/shop'>Zakupy</Link></li>
-                    <li><Link to='/schoolJsProject/contact'>Kontakt</Link></li>
-                    <li><Link to='/schoolJsProject/admin'>Admin</Link></li>
+                    <li><Link to='/'>Strona Główna</Link></li>
+                    <li><Link to='/shop'>Zakupy</Link></li>
+                    <li><Link to='/contact'>Kontakt</Link></li>
+                    <li><Link to='/admin'>Admin</Link></li>
                     <li>
-                        <Link to='/schoolJsProject/trolley'>
+                        <Link to='/trolley'>
                             <span className="material-icons nav-cart">shopping_cart</span>
                             {sum} zł
                         </Link>

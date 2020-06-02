@@ -47,7 +47,7 @@ export const ProductPage: React.FC = (props: any) => {
       })
     );
     dispatch(deleteProduct(product.id));
-    props.history.push("/schoolJsProject/shop");
+    props.history.push("/shop");
   };
 
   return (
