@@ -31,7 +31,7 @@ export const Nav:React.FC = () => {
 
     return(
         <div className="navigation">
-            <h1><Link to='/schoolJsProject/'>Sklep</Link></h1>
+            <h1><Link to='/shop'>Sklep</Link></h1>
             {
                 transitions.map( (style:any) => {
                     console.log(style)

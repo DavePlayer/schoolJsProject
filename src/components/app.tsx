@@ -17,9 +17,8 @@ import { Contact } from './reducers/contact'
 export const App:React.FC = () => {
     const Test = PageHolder
     return (
-        <Router> 
+        <HashRouter basename="schoolJsProject">
             <Switch>
-                <HashRouter basename="schoolJsProject">
                     <Route path="/" exact render={() => <Test children={<Home />}/>} />
                     <Route path="/admin" exact render={() => <PageHolder children={<AdminPanel />}/>} />
                     <Route path="/shop" exact render={() => <PageHolder children={<Shop />} />} />
@@ -27,9 +26,8 @@ export const App:React.FC = () => {
                     <Route path="/shop/:id" component={ProductPage} />
                     <Route path="/contact" exact render={() => <PageHolder children={<Contact />} /> } />
                     <Route component={err404} />
-                </ HashRouter>
             </Switch>
-        </Router>
+        </ HashRouter>
     )
 }
 

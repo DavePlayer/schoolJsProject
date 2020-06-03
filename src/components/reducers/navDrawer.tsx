@@ -12,12 +12,12 @@ export const NavDrawer:React.FC<any> = (props:any) => {
                     <span onClick={() => props.changeDrawerActive(false)} className="material-icons">highlight_off</span>
                     </div>
                     <ul>
-                        <li><Link onClick={() => props.changeDrawerActive(false)} to='/schoolJsProject/'>Strona Główna</Link></li>
-                        <li><Link onClick={() => props.changeDrawerActive(false)} to='/schoolJsProject/shop'>Zakupy</Link></li>
-                        <li><Link onClick={() => props.changeDrawerActive(false)} to='/schoolJsProject/contact'>Kontakt</Link></li>
-                        <li><Link onClick={() => props.changeDrawerActive(false)} to='/schoolJsProject/admin'>Admin</Link></li>
+                        <li><Link onClick={() => props.changeDrawerActive(false)} to='/'>Strona Główna</Link></li>
+                        <li><Link onClick={() => props.changeDrawerActive(false)} to='/shop'>Zakupy</Link></li>
+                        <li><Link onClick={() => props.changeDrawerActive(false)} to='/contact'>Kontakt</Link></li>
+                        <li><Link onClick={() => props.changeDrawerActive(false)} to='/admin'>Admin</Link></li>
                         <li>
-                            <Link onClick={() => props.changeDrawerActive(false)} to='/schoolJsProject/trolley'>
+                            <Link onClick={() => props.changeDrawerActive(false)} to='/trolley'>
                                 <span className="material-icons nav-cart">shopping_cart</span>Zakupy
                             </Link>
                         </li>
